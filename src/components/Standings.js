@@ -43,7 +43,7 @@ function Standings() {
 
       apiCall()
     }
-  })
+  }, [])
   
   return (
     <div className='standingsContainer'>

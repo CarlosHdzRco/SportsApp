@@ -4,6 +4,8 @@ export const reducer = (state, action) => {
     if(state === undefined) {
         state = {
             standings: [],
+            statistics: {league: 0, playerList: []},
+            matches: [],
             leagueInfo: {league: 0}
         }
     }
@@ -11,8 +13,6 @@ export const reducer = (state, action) => {
     switch(action.type) {
         
         case 'UPDATE_LEAGUE_INFO':
-
-            // console.log('reducer: ',action.leagueInfo)
             return {
                 ...state,
                 leagueInfo: action.leagueInfo
@@ -21,6 +21,12 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 standings: action.standings
+            }
+        case 'ADD_STATISTICS':
+            console.log(action.statistics)
+            return {
+                ...state,
+                statistics: action.statistics
             }
         default:
             return state;

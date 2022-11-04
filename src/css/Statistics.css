@@ -1,0 +1,9 @@
+.statisticsContainer {
+    /* background-color: red; */
+    width: 70%;
+    padding-top: 100px;
+}
+
+.ui.grid.statisticsContainer {
+    margin-top: 20px;
+}

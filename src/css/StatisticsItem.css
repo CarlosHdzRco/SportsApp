@@ -1,0 +1,16 @@
+.playerPicTop {
+    height: 30%;
+    width: 30%;
+}
+
+.playerPicSecond {
+    height: 50%;
+    width: 50%;
+    background-color: blue;
+}
+
+.playerPicRest {
+    height: 50%;
+    width: 50%;
+    background-color: yellow;
+}

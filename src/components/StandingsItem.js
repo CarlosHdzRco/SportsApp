@@ -4,7 +4,7 @@ import '../css/StandingsItem.css'
 
 
 function StandingsItem({teamObj}) {
-    console.log(teamObj)
+    // console.log(teamObj)
   return (
     <>
         <Table.Row>

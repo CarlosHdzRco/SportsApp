@@ -11,3 +11,10 @@ export const updateLeagueInfo = (leagueInfo) => {
         leagueInfo
     }
 }
+
+export const addStatistics = (statistics) => {
+    return {
+        type: 'ADD_STATISTICS',
+        statistics
+    }
+}
