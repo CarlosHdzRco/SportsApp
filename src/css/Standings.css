@@ -1,0 +1,25 @@
+.standingsContainer {
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.leagueInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leagueLogoText {
+    display: flex;
+    align-items: center;
+}
+
+.leagueInfoLogo {
+    height: 60px;
+}
+
+.leagueInfoFlag {
+    display: flex;
+    align-self: center;
+    height: 40px;
+}

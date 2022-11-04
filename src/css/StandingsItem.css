@@ -1,0 +1,22 @@
+.teamColumn {
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    justify-content:flex-start;
+}
+
+.logoImg {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.teamInfo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.teamRank {
+    text-align:center;
+}
