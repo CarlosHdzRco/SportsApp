@@ -23,3 +23,15 @@
     font-family: 'Titillium Web', sans-serif;
 
 }
+.ui.fluid.selection.dropdown {
+    width: 70%;
+}
+
+.selected.item {
+    width: 100%;
+}
+
+.ui.dropdown .menu>.item {
+    width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
