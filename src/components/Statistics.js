@@ -51,40 +51,49 @@ function Statistics() {
           <StatisticsItem index={0} />
         </Grid.Row>
 
-        <Grid.Row columns={3}>
+        <Grid.Row columns={2}>
           <StatisticsItem index={1} />
           <StatisticsItem index={2} />
-          <StatisticsItem index={3} />
         </Grid.Row>
 
-        <Grid.Row columns={4}>
+        <Grid.Row columns={2}>
+          <StatisticsItem index={3} />
           <StatisticsItem index={4} />
+        </Grid.Row>
+
+        <Grid.Row columns={3}>
           <StatisticsItem index={5} />
           <StatisticsItem index={6} />
           <StatisticsItem index={7} />
-
         </Grid.Row>
 
-        <Grid.Row columns={4}>
+        <Grid.Row columns={3}>
           <StatisticsItem index={8} />
           <StatisticsItem index={9} />
           <StatisticsItem index={10} />
-          <StatisticsItem index={11} />
-        </Grid.Row>
-
-        <Grid.Row columns={4}>
-          <StatisticsItem index={12} />
-          <StatisticsItem index={13} />
-          <StatisticsItem index={14} />
-          <StatisticsItem index={15} />
+          
         </Grid.Row>
         
-        <Grid.Row columns={4}>
+        <Grid.Row columns={3}>
+          <StatisticsItem index={11} />
+          <StatisticsItem index={12} />
+          <StatisticsItem index={13} />         
+        </Grid.Row>
+
+        <Grid.Row columns={3}>
+          <StatisticsItem index={14} />
+          <StatisticsItem index={15} />
           <StatisticsItem index={16} />
+        </Grid.Row>
+
+
+        <Grid.Row columns={3}>
           <StatisticsItem index={17} />
           <StatisticsItem index={18} />
           <StatisticsItem index={19} />
         </Grid.Row>
+
+
       </Grid>
     </>
   )
