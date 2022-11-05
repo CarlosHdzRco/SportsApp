@@ -13,6 +13,14 @@ export const addStandings = (id, standingsList) => {
     }
 }
 
+export const addStatistics = (id, statisticsList) => {
+    return {
+        type: 'ADD_STATISTICS',
+        id,
+        statisticsList
+    }
+}
+
 export const updateLeagueInfo = (leagueInfo) => {
     return {
         type: 'UPDATE_LEAGUE_INFO',
@@ -20,9 +28,3 @@ export const updateLeagueInfo = (leagueInfo) => {
     }
 }
 
-export const addStatistics = (statistics) => {
-    return {
-        type: 'ADD_STATISTICS',
-        statistics
-    }
-}

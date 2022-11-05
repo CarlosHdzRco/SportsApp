@@ -5,19 +5,19 @@ import '../css/StatisticsItem.css'
 
 function StatisticsItem({index}) {
 
-    const player = useSelector((state) => state.statistics.playerList[index])
-    console.log('statsItem: ',player.player)
+    const player = useSelector((state) => state.statistics.playerList)
+    console.log('player: ',player)
+    console.log('playerIndex: ', player[index].player.photo)
+    console.log('in StatisticsItem Component')
 
 
     if(index === 0){
         return (
             <>
                 <Grid.Column className='statsColumn'>
-                    {/* <Image src={player.photo} /> */}
-                    
                     <Segment>
                     <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicTop' src={player.player.photo} />
+                        <Image className='playerPicTop' src={player[index].player.photo} />
                     </Segment>
                 </Grid.Column>
             </>
@@ -31,7 +31,7 @@ function StatisticsItem({index}) {
                     {/* <Image src={player.photo} /> */}
                     <Segment>
                         <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicSecond' src={player.player.photo} />
+                        <Image className='playerPicSecond' src={player[index].player.photo} />
                     </Segment>
 
                 </Grid.Column>
@@ -46,7 +46,7 @@ function StatisticsItem({index}) {
                     {/* <Image src={player.photo} /> */}
                     <Segment>
                         <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicRest' src={player.player.photo} />
+                        <Image className='playerPicRest' src={player[index].player.photo} />
                     </Segment>
 
                 </Grid.Column>

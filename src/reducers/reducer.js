@@ -31,10 +31,10 @@ export const reducer = (state, action) => {
                 standings: {league: action.id, standingsList: action.standingsList}
             }
         case 'ADD_STATISTICS':
-            console.log(action.statistics)
+            // console.log(action.statisticsList)
             return {
                 ...state,
-                statistics: action.statistics
+                statistics: {league: action.id, playerList: action.statisticsList}
             }
         default:
             return state;
