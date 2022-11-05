@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { Menu, Dropdown, Flag } from 'semantic-ui-react'
 import '../css/MenuChoice.css'
 import {Link} from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { updateLeagueId } from '../actions/actions'
 
-const friendOptions = [
+const leagueOptions = [
   {
     key: 'Premier League',
     text: 'Premier League',
@@ -44,11 +46,35 @@ const friendOptions = [
 
 function MenuChoice({children}) {
 
+    const dispatch = useDispatch()
+    const league = useSelector((state) => state.leagueId)
     const [activeItem, setActiveItem] = useState()
 
     const handleItemClick = (e) => {
         console.log(e.target.innerText)
         setActiveItem(e.target.innerText)
+    }
+
+    const changeLeague = (e) => {
+
+      if(e.target.innerText === 'Premier League') {
+        dispatch(updateLeagueId('39'))
+      }
+      else if(e.target.innerText === 'La Liga') {
+        dispatch(updateLeagueId('140'))
+      }
+      else if(e.target.innerText === 'Bundesliga') {
+        dispatch(updateLeagueId('78'))
+      }
+      else if(e.target.innerText === 'Serie A') {
+        dispatch(updateLeagueId('135'))
+      }
+      else if(e.target.innerText === 'Ligue 1') {
+        dispatch(updateLeagueId('61'))
+      }
+      else if(e.target.innerText === 'Eredivise') {
+        dispatch(updateLeagueId('88'))
+      }
     }
   return (
     <>
@@ -56,8 +82,9 @@ function MenuChoice({children}) {
         placeholder='Select Friend'
         fluid
         selection
-        options={friendOptions}
+        options={leagueOptions}
         defaultValue='Premier League'
+        onChange={changeLeague}
       />
 
       <Menu className='MenuChoice'>

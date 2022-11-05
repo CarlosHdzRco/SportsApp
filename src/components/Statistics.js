@@ -45,7 +45,7 @@ function Statistics() {
 
   return (
     <>
-      <Grid className='statisticsContainer'>
+      {/* <Grid className='statisticsContainer'>
 
         <Grid.Row columns={1}>
           <StatisticsItem index={0} />
@@ -94,8 +94,8 @@ function Statistics() {
         </Grid.Row>
 
 
-      </Grid>
-    </>
+      </Grid>*/}
+    </> 
   )
 }
 

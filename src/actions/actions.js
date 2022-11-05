@@ -1,7 +1,15 @@
-export const addStandings = (standings) => {
+export const updateLeagueId = (id) => {
+    return {
+        type: 'UPDATE_LEAGUE_ID',
+        id
+    }
+}
+
+export const addStandings = (id, standingsList) => {
     return {
         type: 'ADD_STANDINGS',
-        standings
+        id,
+        standingsList
     }
 }
 

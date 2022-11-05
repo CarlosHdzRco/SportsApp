@@ -5,10 +5,9 @@ import '../css/StatisticsItem.css'
 
 function StatisticsItem({index}) {
 
-    // const player = useSelector((state) => state.statistics.playerList[index].player)
-    // console.log(player)
+    const player = useSelector((state) => state.statistics.playerList[index])
+    console.log('statsItem: ',player.player)
 
-    
 
     if(index === 0){
         return (
@@ -18,7 +17,7 @@ function StatisticsItem({index}) {
                     
                     <Segment>
                     <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicTop' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                        <Image className='playerPicTop' src={player.player.photo} />
                     </Segment>
                 </Grid.Column>
             </>
@@ -32,7 +31,7 @@ function StatisticsItem({index}) {
                     {/* <Image src={player.photo} /> */}
                     <Segment>
                         <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicSecond' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                        <Image className='playerPicSecond' src={player.player.photo} />
                     </Segment>
 
                 </Grid.Column>
@@ -47,7 +46,7 @@ function StatisticsItem({index}) {
                     {/* <Image src={player.photo} /> */}
                     <Segment>
                         <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicRest' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                        <Image className='playerPicRest' src={player.player.photo} />
                     </Segment>
 
                 </Grid.Column>

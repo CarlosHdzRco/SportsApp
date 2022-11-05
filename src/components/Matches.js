@@ -1,12 +1,36 @@
 import React from 'react'
 import '../css/Matches.css'
+import { Grid, Image } from 'semantic-ui-react'
+
 
 function Matches() {
   return (
-    <div className='matchesContainer'>Matches
-      <form>
-        <input type='text' placeholder='here'></input>
-      </form>
+    <div className='matchesContainer'>
+      <Grid celled='internally'>
+    <Grid.Row>
+      <Grid.Column width={3}>
+        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+      </Grid.Column>
+      <Grid.Column width={10}>
+        {/* <Image src='https://react.semantic-ui.com/images/wireframe/centered-paragraph.png' /> */}
+      </Grid.Column>
+      <Grid.Column width={3}>
+        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+      </Grid.Column>
+    </Grid.Row>
+
+    <Grid.Row>
+      <Grid.Column width={3}>
+        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+      </Grid.Column>
+      <Grid.Column width={10}>
+        
+      </Grid.Column>
+      <Grid.Column width={3}>
+        <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
     </div>
     
   )
