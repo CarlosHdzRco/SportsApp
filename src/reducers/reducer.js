@@ -4,7 +4,8 @@ export const reducer = (state, action) => {
     if(state === undefined) {
         state = {
             standings: {league: 0, standingsList: []},
-            statistics: {league: 0, playerList: []},
+            topGoals: {league: 0, playerList: []},
+            topAssists: {league: 0, playerList: []},
             matches: {league: 0, matchesList: []},
             leagueInfo: {},
             leagueId: '39'
@@ -30,11 +31,17 @@ export const reducer = (state, action) => {
                 ...state,
                 standings: {league: action.id, standingsList: action.standingsList}
             }
-        case 'ADD_STATISTICS':
+        case 'ADD_GOALS':
             // console.log(action.statisticsList)
             return {
                 ...state,
-                statistics: {league: action.id, playerList: action.statisticsList}
+                topGoals: {league: action.id, playerList: action.statisticsList}
+            }
+        case 'ADD_ASSISTS':
+            // console.log(action.statisticsList)
+            return {
+                ...state,
+                topAssists: {league: action.id, playerList: action.statisticsList}
             }
         case 'ADD_MATCHES':
             return {

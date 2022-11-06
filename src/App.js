@@ -5,6 +5,8 @@ import Statistics from './components/Statistics';
 import Matches from './components/Matches';
 import MenuChoice from './components/MenuChoice';
 import './css/MenuChoice.css'
+import Goals from './components/Goals';
+import Assists from './components/Assists';
 
 function App() {
 
@@ -16,7 +18,10 @@ function App() {
         <MenuChoice>
           <Routes>
             <Route path="/" element={<Standings />}/>
-            <Route path='/stats' element={<Statistics />}/>
+            <Route path='/stats' element={<Statistics />}>
+              <Route path='' element={<Goals />}/>
+              <Route path='assists' element={<Assists />}/>
+            </Route>
             <Route path='/matches' element={<Matches />}/>
           </Routes>
         </MenuChoice>

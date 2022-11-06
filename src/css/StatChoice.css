@@ -1,0 +1,10 @@
+.ui.StatChoice.menu {
+    margin: 0px;
+    width: 50%;
+}
+
+.item.statItem {
+    width: 50%;
+    justify-content: center;
+    background-color: red;
+}

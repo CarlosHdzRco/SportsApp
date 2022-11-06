@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux'
 import { Grid, Image, Segment, Label, Statistic, Icon, Item } from 'semantic-ui-react'
 import '../css/StatisticsItem.css'
 
-function StatisticsItem({index}) {
+function AssistsItem({index}) {
 
-    const player = useSelector((state) => state.statistics.playerList)
+    const player = useSelector((state) => state.topAssists.playerList)
     // console.log('player: ',player)
     // console.log('playerIndex: ', player[index])
     // console.log('in StatisticsItem Component')
@@ -23,7 +23,7 @@ function StatisticsItem({index}) {
 
                                 <Statistic>
                                     <Statistic.Value>
-                                        <Image src={player[index].statistics[0].team.logo} inline circular />
+                                        <Image src={player[index].statistics[0].team.logo} inline />
                                     
                                     </Statistic.Value>
                                     <Statistic.Label>{player[index].player.name}</Statistic.Label>
@@ -36,9 +36,9 @@ function StatisticsItem({index}) {
 
                                 <Statistic>
                                     <Statistic.Value>
-                                        <Icon name='soccer' />{player[index].statistics[0].goals.total}
+                                        {player[index].statistics[0].goals.assists}
                                     </Statistic.Value>
-                                    <Statistic.Label>Goals</Statistic.Label>
+                                    <Statistic.Label>Assists</Statistic.Label>
                                 </Statistic>
                                 
                             </Statistic.Group>
@@ -63,7 +63,7 @@ function StatisticsItem({index}) {
 
                         <Statistic>
                             <Statistic.Value>
-                                <Image src={player[index].statistics[0].team.logo} inline circular />
+                                <Image src={player[index].statistics[0].team.logo} inline />
                             
                             </Statistic.Value>
                             <Statistic.Label>{player[index].player.name}</Statistic.Label>
@@ -76,9 +76,9 @@ function StatisticsItem({index}) {
 
                         <Statistic>
                             <Statistic.Value>
-                                <Icon name='soccer' />{player[index].statistics[0].goals.total}
+                                {player[index].statistics[0].goals.assists}
                             </Statistic.Value>
-                            <Statistic.Label>Goals</Statistic.Label>
+                            <Statistic.Label>Assists</Statistic.Label>
                         </Statistic>
 
                         </Statistic.Group>
@@ -104,22 +104,17 @@ function StatisticsItem({index}) {
 
                         <Statistic>
                             <Statistic.Value>
-                                <Image src={player[index].statistics[0].team.logo} inline circular />
+                                <Image src={player[index].statistics[0].team.logo} inline />
                             
                             </Statistic.Value>
                             <Statistic.Label>{player[index].player.name}</Statistic.Label>
                         </Statistic>
-
-                        {/* <Statistic size='mini'>
-                            <Statistic.Value className='statsText'>{player[index].statistics[0].games.appearences}</Statistic.Value>
-                            <Statistic.Label className='statsText'>Games</Statistic.Label>
-                        </Statistic> */}
-
+                        
                         <Statistic>
                             <Statistic.Value>
-                                <Icon name='soccer' />{player[index].statistics[0].goals.total}
+                                {player[index].statistics[0].goals.assists}
                             </Statistic.Value>
-                            <Statistic.Label>Goals</Statistic.Label>
+                            <Statistic.Label>Assists</Statistic.Label>
                         </Statistic>
 
                         </Statistic.Group>
@@ -133,4 +128,4 @@ function StatisticsItem({index}) {
 
 }
 
-export default StatisticsItem
+export default AssistsItem

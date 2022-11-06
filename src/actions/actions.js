@@ -13,9 +13,17 @@ export const addStandings = (id, standingsList) => {
     }
 }
 
-export const addStatistics = (id, statisticsList) => {
+export const addGoals = (id, statisticsList) => {
     return {
-        type: 'ADD_STATISTICS',
+        type: 'ADD_GOALS',
+        id,
+        statisticsList
+    }
+}
+
+export const addAssists = (id, statisticsList) => {
+    return {
+        type: 'ADD_ASSISTS',
         id,
         statisticsList
     }
