@@ -1,13 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Grid, Image, Segment, Label } from 'semantic-ui-react'
+import { Grid, Image, Segment, Label, Statistic, Icon, Item } from 'semantic-ui-react'
 import '../css/StatisticsItem.css'
 
 function StatisticsItem({index}) {
 
     const player = useSelector((state) => state.statistics.playerList)
     console.log('player: ',player)
-    console.log('playerIndex: ', player[index].player.photo)
+    console.log('playerIndex: ', player[index])
     console.log('in StatisticsItem Component')
 
 
@@ -15,23 +15,74 @@ function StatisticsItem({index}) {
         return (
             <>
                 <Grid.Column className='statsColumn'>
-                    <Segment>
-                    <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicTop' src={player[index].player.photo} />
+                    <Segment >
+                    <Label color='green' attached='top left'>{index+1}</Label>
+                        <div className='statsFlex'>
+                            <Image circular className='playerPicTop' src={player[index].player.photo} />
+                            <Statistic.Group size='huge'>
+
+                                <Statistic>
+                                    <Statistic.Value>
+                                        <Image src={player[index].statistics[0].team.logo} inline circular />
+                                    
+                                    </Statistic.Value>
+                                    <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                                </Statistic>
+
+                                <Statistic>
+                                <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
+                                <Statistic.Label>Games</Statistic.Label>
+                                </Statistic>
+
+                                <Statistic>
+                                    <Statistic.Value>
+                                        <Icon name='soccer' />{player[index].statistics[0].goals.total}
+                                    </Statistic.Value>
+                                    <Statistic.Label>Goals</Statistic.Label>
+                                </Statistic>
+                                
+                            </Statistic.Group>
+                        </div>
+                        
                     </Segment>
                 </Grid.Column>
             </>
           )
     }
 
-    if(index === 1 || index === 2 || index === 3){
+    if(index === 1 || index === 2 || index === 3 || index === 4){
         return (
             <>
                 <Grid.Column className='statsColumn'>
                     {/* <Image src={player.photo} /> */}
                     <Segment>
-                        <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicSecond' src={player[index].player.photo} />
+                        <Label color='yellow' attached='top left'>{index+1}</Label>
+                        <div className='statsFlex'>
+                        <Image circular className='playerPicSecond' src={player[index].player.photo} />
+                        <Statistic.Group>
+
+                        <Statistic>
+                            <Statistic.Value>
+                                <Image src={player[index].statistics[0].team.logo} inline circular />
+                            
+                            </Statistic.Value>
+                            <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                        </Statistic>
+
+                        <Statistic>
+                            <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
+                            <Statistic.Label>Games</Statistic.Label>
+                        </Statistic>
+
+                        <Statistic>
+                            <Statistic.Value>
+                                <Icon name='soccer' />{player[index].statistics[0].goals.total}
+                            </Statistic.Value>
+                            <Statistic.Label>Goals</Statistic.Label>
+                        </Statistic>
+
+                        </Statistic.Group>
+                        </div>
                     </Segment>
 
                 </Grid.Column>
@@ -45,8 +96,34 @@ function StatisticsItem({index}) {
                 <Grid.Column className='statsColumn'>
                     {/* <Image src={player.photo} /> */}
                     <Segment>
-                        <Label attached='top left'>{index+1}</Label>
-                        <Image className='playerPicRest' src={player[index].player.photo} />
+                        <Label color='red' attached='top left'>{index+1}</Label>
+                        
+                        <div className='statsFlex'>
+                        <Image circular className='playerPicRest' src={player[index].player.photo} />
+                        <Statistic.Group size='mini'>
+
+                        <Statistic>
+                            <Statistic.Value>
+                                <Image src={player[index].statistics[0].team.logo} inline circular />
+                            
+                            </Statistic.Value>
+                            <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                        </Statistic>
+
+                        {/* <Statistic size='mini'>
+                            <Statistic.Value className='statsText'>{player[index].statistics[0].games.appearences}</Statistic.Value>
+                            <Statistic.Label className='statsText'>Games</Statistic.Label>
+                        </Statistic> */}
+
+                        <Statistic>
+                            <Statistic.Value>
+                                <Icon name='soccer' />{player[index].statistics[0].goals.total}
+                            </Statistic.Value>
+                            <Statistic.Label>Goals</Statistic.Label>
+                        </Statistic>
+
+                        </Statistic.Group>
+                        </div>
                     </Segment>
 
                 </Grid.Column>
