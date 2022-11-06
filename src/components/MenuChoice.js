@@ -4,6 +4,7 @@ import '../css/MenuChoice.css'
 import {Link} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateLeagueId } from '../actions/actions'
+import LeagueHeader from './LeagueHeader'
 
 const leagueOptions = [
   {
@@ -48,7 +49,7 @@ function MenuChoice({children}) {
 
     const dispatch = useDispatch()
     const league = useSelector((state) => state.leagueId)
-    const [activeItem, setActiveItem] = useState()
+    const [activeItem, setActiveItem] = useState('')
 
     const handleItemClick = (e) => {
         console.log(e.target.innerText)
@@ -114,6 +115,8 @@ function MenuChoice({children}) {
           <h4 className='menuText'>Matches</h4>
           </Menu.Item>
       </Menu>
+
+      <LeagueHeader />
 
       {children}
     </>

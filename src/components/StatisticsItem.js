@@ -6,9 +6,9 @@ import '../css/StatisticsItem.css'
 function StatisticsItem({index}) {
 
     const player = useSelector((state) => state.statistics.playerList)
-    console.log('player: ',player)
-    console.log('playerIndex: ', player[index])
-    console.log('in StatisticsItem Component')
+    // console.log('player: ',player)
+    // console.log('playerIndex: ', player[index])
+    // console.log('in StatisticsItem Component')
 
 
     if(index === 0){

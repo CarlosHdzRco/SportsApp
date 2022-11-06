@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { addStatistics } from '../actions/actions'
 import StatisticsItem from './StatisticsItem'
 import '../css/Statistics.css'
+import { updateLeagueInfo } from '../actions/actions'
 
 
 function Statistics() {
@@ -29,6 +30,17 @@ function Statistics() {
       })
       .then((response) => response.json())
       .then((data) => {
+
+        // console.log('data: ',data.response[0].statistics[0].league)
+        
+        // dispatch league info into global leagueInfo state
+        dispatch(updateLeagueInfo({ 
+          country: data.response[0].statistics[0].league.country,
+          flag: data.response[0].statistics[0].league.flag,
+          logo: data.response[0].statistics[0].league.logo,
+          name: data.response[0].statistics[0].league.name,
+          season: data.response[0].statistics[0].league.season
+        }))
 
         //dispatch league info into global leagueInfo state
         dispatch(addStatistics(leagueId, data.response))
@@ -103,11 +115,7 @@ function Statistics() {
   }
   else {
     return (
-      
-        <Dimmer active inverted>
-          <Loader size='large'>Loading</Loader>
-        </Dimmer>
-
+      <Loader active inline />
     )
   }
 }

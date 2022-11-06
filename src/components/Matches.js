@@ -4,6 +4,7 @@ import { Grid, Image, Dimmer, Loader } from 'semantic-ui-react'
 import {useDispatch, useSelector} from 'react-redux'
 import { addMatches } from '../actions/actions'
 import MatchesItem from './MatchesItem'
+import { updateLeagueInfo } from '../actions/actions'
 
 
 
@@ -28,8 +29,18 @@ function Matches() {
       .then((response) => response.json())
       .then((data) => {
 
-        // console.log(data.response)
+        console.log('data: ',data.response[0].league)
+        
         //dispatch league info into global leagueInfo state
+        dispatch(updateLeagueInfo({ 
+          country: data.response[0].league.country,
+          flag: data.response[0].league.flag,
+          logo: data.response[0].league.logo,
+          name: data.response[0].league.name,
+          season: data.response[0].league.season
+        }))
+
+        //dispatch matches info into global matches state
         dispatch(addMatches(leagueId, data.response))
         setLoaded(true)
       })
@@ -60,10 +71,7 @@ function Matches() {
   }
   else {
     return (
-        <Dimmer active inverted>
-          <Loader size='large'>Loading</Loader>
-        </Dimmer>
-
+      <Loader active inline />
     ) 
   }
 

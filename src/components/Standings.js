@@ -1,18 +1,18 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { updateLeagueInfo, addStandings, updateLeagueId } from '../actions/actions'
-import { Header, Image, Table} from 'semantic-ui-react'
+import { Table, Loader} from 'semantic-ui-react'
 import TableHeader from './TableHeader'
 import StandingsItem from './StandingsItem'
 import '../css/Standings.css'
+
 
 function Standings() {
 
   const dispatch = useDispatch()
   const leagueId = useSelector((state) => state.leagueId)
-  const leagueInfo = useSelector((state) => state.leagueInfo)
   const standings = useSelector((state) => state.standings)
-
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     console.log('standings use effect')
@@ -36,42 +36,44 @@ function Standings() {
         }))
 
         //dispatch standings info into global standings state
-        dispatch(addStandings(data.response[0].league.id, data.response[0].league.standings[0]))  
+        dispatch(addStandings(data.response[0].league.id, data.response[0].league.standings[0]))
+        setLoaded(true)
       })
     }     
 
     if(String(leagueId) !== String(standings.league)) {
       apiCall()
     }
+    else {
+      setLoaded(true)
+    }
+    
   }, [leagueId])
   
-  return (
-    <div className='standingsContainer'>
-
-      {/* League Header */}
-      <Header as='h2' className='leagueInfo'>
-        <div className='leagueLogoText'>
-          <Image className='leagueInfoLogo' src={leagueInfo.logo}/> 
-          {leagueInfo.name}
-        </div>
-        <div className='leagueInfoFlag'>
-          <Image src={leagueInfo.flag}/>
-        </div>
-       
-      </Header>
-      
-      {/* Table Standings */}
-      <Table striped>
-        <TableHeader />
-        <Table.Body>
-          {standings.standingsList.map((teamObj) => {
-            return <StandingsItem key={teamObj.id} teamObj={teamObj}/>
-          })}
-        </Table.Body>
-      </Table>
-
-    </div>
-  )
+  if(loaded === true) {
+    return (
+      <div className='standingsContainer'>
+  
+        
+        {/* Table Standings */}
+        <Table striped>
+          <TableHeader />
+          <Table.Body>
+            {standings.standingsList.map((teamObj) => {
+              return <StandingsItem key={teamObj.id} teamObj={teamObj}/>
+            })}
+          </Table.Body>
+        </Table>
+  
+      </div>
+    )
+  }
+  else {
+    return (
+      <Loader active inline />
+    ) 
+  }
+  
 }
 
 export default Standings

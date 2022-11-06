@@ -3,7 +3,7 @@ import { Grid, Image, Statistic } from 'semantic-ui-react'
 import '../css/MatchesItem.css'
 
 function MatchesItem({matchObj}) {
-    console.log(matchObj)
+    // console.log(matchObj)
     const date = matchObj.fixture.date.slice(0,10)
     const time = matchObj.fixture.date.slice(11,16)
 

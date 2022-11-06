@@ -1,0 +1,26 @@
+.leagueHeaderContainer {
+    width: 70%;
+    margin-top: 10px;
+    /* margin-bottom: 60px; */
+    /* border-bottom: 1px solid gray; */
+}
+
+.leagueInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leagueLogoText {
+    display: flex;
+    align-items: center;
+}
+
+.leagueInfoLogo {
+    height: 60px;
+}
+
+.leagueInfoFlag {
+    display: flex;
+    align-self: center;
+    height: 40px;
+}
