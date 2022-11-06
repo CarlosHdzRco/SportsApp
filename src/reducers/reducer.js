@@ -36,6 +36,12 @@ export const reducer = (state, action) => {
                 ...state,
                 statistics: {league: action.id, playerList: action.statisticsList}
             }
+        case 'ADD_MATCHES':
+            return {
+                ...state,
+                matches: {league: action.id, matchesList: action.matchesList}
+            }
+
         default:
             return state;
     }

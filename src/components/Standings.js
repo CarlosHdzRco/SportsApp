@@ -25,7 +25,8 @@ function Standings() {
         }
       }).then((response) => response.json())
       .then((data) => {
-
+      
+        //dispatch league info into global leagueInfo state
         dispatch(updateLeagueInfo({ 
           country: data.response[0].league.country,
           flag: data.response[0].league.flag,
@@ -34,16 +35,10 @@ function Standings() {
           season: data.response[0].league.season
         }))
 
-        dispatch(addStandings(data.response[0].league.id, data.response[0].league.standings[0]))
-    
+        //dispatch standings info into global standings state
+        dispatch(addStandings(data.response[0].league.id, data.response[0].league.standings[0]))  
       })
-      
-
-      //dispatch league info into global leagueInfo state
-    }
-
-      //dispatch standings info into global standings state
-      
+    }     
 
     if(String(leagueId) !== String(standings.league)) {
       apiCall()

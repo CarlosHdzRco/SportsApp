@@ -21,6 +21,14 @@ export const addStatistics = (id, statisticsList) => {
     }
 }
 
+export const addMatches = (id, matchesList) => {
+    return {
+        type: 'ADD_MATCHES',
+        id,
+        matchesList
+    }
+}
+
 export const updateLeagueInfo = (leagueInfo) => {
     return {
         type: 'UPDATE_LEAGUE_INFO',

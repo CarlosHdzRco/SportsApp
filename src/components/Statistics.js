@@ -12,7 +12,6 @@ function Statistics() {
   const stats = useSelector((state) => state.statistics)
   const leagueId = useSelector((state) => state.leagueId)
   const dispatch = useDispatch()
-  const [rows, setRow] = useState([[],[],[],[],[],[],[],[]])
   const [loaded, setLoaded] = useState(false)
 
   // console.log('rows: ', rows[0])
@@ -110,7 +109,6 @@ function Statistics() {
         </Dimmer>
 
     )
-    
   }
 }
 
