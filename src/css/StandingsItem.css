@@ -17,19 +17,11 @@
     align-items: center;
 }
 
-
-
 .statsFlex {
     display: flex;
     /* height: 40%; */
     /* font-size: small; */
 }
-
-.leftBorder {
-    border-left-color: blue;
-    /* background-color: red; */
-}
-
 
 @media screen and (max-width: 700px) {
     .logoImg {

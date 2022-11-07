@@ -11,7 +11,7 @@ function MatchesItem({matchObj}) {
     <>
         <Grid.Row>
             <Grid.Column width={3}>
-                <Image src={matchObj.teams.home.logo} />
+                <Image className='teamLogo' src={matchObj.teams.home.logo} />
             </Grid.Column>
             <Grid.Column  width={10}>
                 <div className='matchMiddleContent'>

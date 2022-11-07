@@ -1,28 +1,19 @@
 .standingsContainer {
     width: 70%;
-    margin-top: 10px;
-    margin-bottom: 60px;
+
 }
 
 @media screen and (max-width: 700px) {
     .standingsContainer {
         width: 95%;
-        margin-top: 10px;
-        margin-bottom: 60px;
-        /* transform: scale(.9); */
-        background-color: blue;
-        margin-top: 0;
+        /* background-color: blue; */
+        margin-top: 20px;
         font-size:xx-small;
     }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
     .standingsContainer {
-        /* width: 90%; */
-        margin-top: 10px;
-        margin-bottom: 60px;
-        /* transform: scale(.9); */
-        background-color: red;
         margin-top: 0;
         font-size:small
     }
