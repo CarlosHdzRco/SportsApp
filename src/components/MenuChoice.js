@@ -52,7 +52,7 @@ function MenuChoice({children}) {
     const [activeItem, setActiveItem] = useState('')
 
     const handleItemClick = (e) => {
-        console.log(e.target.innerText)
+        // console.log(e.target.innerText)
         setActiveItem(e.target.innerText)
     }
 

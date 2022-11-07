@@ -14,6 +14,7 @@ function Standings() {
   const standings = useSelector((state) => state.standings)
   const [loaded, setLoaded] = useState(false)
 
+
   useEffect(() => {
     console.log('standings use effect')
 
@@ -56,7 +57,7 @@ function Standings() {
   
         
         {/* Table Standings */}
-        <Table striped>
+        <Table striped unstackable>
           <TableHeader />
           <Table.Body>
             {standings.standingsList.map((teamObj) => {

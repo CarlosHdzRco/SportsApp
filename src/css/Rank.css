@@ -1,0 +1,20 @@
+.championsLeague {
+    text-align:center;
+    border-left: 2px solid green;
+    padding-left: 1px;
+    font-weight: 600;
+}
+
+.europaLeague {
+    text-align:center;
+    border-left: 2px solid orange;
+    padding-left: 1px;
+    font-weight: 600;
+}
+
+.relegation {
+    text-align:center;
+    border-left: 2px solid red;
+    padding-left: 1px;
+    font-weight: 600;
+}

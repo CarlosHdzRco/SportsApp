@@ -1,10 +1,11 @@
 import React from 'react'
 import { Table } from 'semantic-ui-react'
+import '../css/TableHeader.css'
 
 function TableHeader() {
   return (
     <>
-        <Table.Header>
+        <Table.Header className='standingsHeader'>
             <Table.Row>
                 <Table.HeaderCell>Team</Table.HeaderCell>
                 <Table.HeaderCell>GP</Table.HeaderCell>

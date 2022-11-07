@@ -17,9 +17,7 @@
     align-items: center;
 }
 
-.teamRank {
-    text-align:center;
-}
+
 
 .statsFlex {
     display: flex;
@@ -27,10 +25,23 @@
     /* font-size: small; */
 }
 
-/* .ui.statistic>.value, .ui.statistics .statistic>.value {
-    font-size: 1rem!important;
+.leftBorder {
+    border-left-color: blue;
+    /* background-color: red; */
 }
 
-.statsText {
-    font-size: 1rem!important;
-} */
+/* @media screen and (max-width: 650px) {
+    .teamColumn {
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+    }
+
+    .logoImg {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+    }
+
+  } */

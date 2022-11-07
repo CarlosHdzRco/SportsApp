@@ -1,16 +1,18 @@
 import React from 'react'
 import { Image, Table} from 'semantic-ui-react'
 import '../css/StandingsItem.css'
+import FormColor from './FormColor'
+import Rank from './Rank'
 
 
 function StandingsItem({teamObj}) {
-    // console.log(teamObj)
+
   return (
     <>
-        <Table.Row>
+        <Table.Row >
             <Table.Cell className='teamColumn'>
-                <div className='teamRank'>
-                    {teamObj.rank}
+                <div>
+                    <Rank rank={teamObj.rank} descr={teamObj.description}/>
                 </div>
                 
                 <div className='teamInfo'>
@@ -27,7 +29,11 @@ function StandingsItem({teamObj}) {
             <Table.Cell>{teamObj.all.goals.against}</Table.Cell>
             <Table.Cell>{teamObj.goalsDiff}</Table.Cell>
             <Table.Cell>{teamObj.points}</Table.Cell>
-            <Table.Cell>{teamObj.form}</Table.Cell>
+            <Table.Cell>
+                {teamObj.form.split('').map((formLetter)=> {
+                    return <FormColor formLetter={formLetter} />
+                })}
+            </Table.Cell>
 
         </Table.Row>
     </>
