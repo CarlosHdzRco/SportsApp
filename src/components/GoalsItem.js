@@ -109,7 +109,7 @@ function GoalsItem({index}) {
                     <Label color='red' attached='top left'>{index+1}</Label>
                         <Statistic.Group className='statsGroup' size='small'>
 
-                            <Statistic className='nameStat'>
+                            <Statistic className='nameStat2'>
                                 <Statistic.Value>
                                     <Image src={player[index].player.photo} inline circular />
                                 
@@ -117,7 +117,7 @@ function GoalsItem({index}) {
                                 <Statistic.Label>{player[index].player.name}</Statistic.Label>
                             </Statistic>
 
-                            <Statistic className='nameLogoStat'>
+                            <Statistic className='nameLogoStat2'>
                                 <Statistic.Value>
                                     <Image src={player[index].statistics[0].team.logo} inline />
                                 
@@ -125,7 +125,7 @@ function GoalsItem({index}) {
                                 <Statistic.Label>{player[index].statistics[0].team.name}</Statistic.Label>
                             </Statistic>
 
-                            <Statistic className='goalsStat'>
+                            <Statistic className='goalsStat2'>
                                 <Statistic.Value>
                                     <Icon className='soccerIcon' name='soccer' />{player[index].statistics[0].goals.total}
                                 </Statistic.Value>

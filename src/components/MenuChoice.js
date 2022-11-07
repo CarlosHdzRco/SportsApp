@@ -79,46 +79,51 @@ function MenuChoice({children}) {
     }
   return (
     <>
-      <Dropdown className='DropDownChoice'
-        placeholder='Select Friend'
-        fluid
-        selection
-        options={leagueOptions}
-        defaultValue='Premier League'
-        onChange={changeLeague}
-      />
+      <div className='menuContainer'>
+        <Dropdown className='DropDownChoice'
+          placeholder='Select Friend'
+          fluid
+          selection
+          options={leagueOptions}
+          defaultValue='Premier League'
+          onChange={changeLeague}
+        />
 
-      <Menu className='MenuChoice'>
-      {/* <li> <Link to="/">Home</Link> </li> */}
+        <Menu className='MenuChoice'>
+        {/* <li> <Link to="/">Home</Link> </li> */}
 
-          <Menu.Item as={Link} to='/'
-          name='Standings'
-          active={activeItem === 'Standings'}
-          onClick={handleItemClick}
-          >
-          <h4 className='menuText'>Standings</h4>
-          </Menu.Item>
-          
-          <Menu.Item as={Link} to='/stats'
-          name='Statistics'
-          active={activeItem === 'Stats'}
-          onClick={handleItemClick}
-          >
-          <h4 className='menuText'>Stats</h4>
-          </Menu.Item>
+            <Menu.Item as={Link} to='/'
+            name='Standings'
+            active={activeItem === 'Standings'}
+            onClick={handleItemClick}
+            >
+            <h4 className='menuText'>Standings</h4>
+            </Menu.Item>
+            
+            <Menu.Item as={Link} to='/stats'
+            name='Statistics'
+            active={activeItem === 'Stats'}
+            onClick={handleItemClick}
+            >
+            <h4 className='menuText'>Stats</h4>
+            </Menu.Item>
 
-          <Menu.Item as={Link} to='/matches'
-          name='Matches'
-          active={activeItem === 'Matches'}
-          onClick={handleItemClick}
-          >
-          <h4 className='menuText'>Matches</h4>
-          </Menu.Item>
-      </Menu>
+            <Menu.Item as={Link} to='/matches'
+            name='Matches'
+            active={activeItem === 'Matches'}
+            onClick={handleItemClick}
+            >
+            <h4 className='menuText'>Matches</h4>
+            </Menu.Item>
+        </Menu>
 
-      <LeagueHeader />
+        <LeagueHeader />
+      </div>
 
-      {children}
+      <div className='childrenContainer'>
+        {children}
+      </div>
+      
 
       {/* <form action="https://www.paypal.com/donate" method="post" target="_top">
         <input type="hidden" name="business" value="XL69VJDPU2PF6" />

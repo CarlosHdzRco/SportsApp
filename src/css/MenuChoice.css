@@ -1,9 +1,18 @@
-.container {
+.menuContainer {
     display: flex;
     flex-direction:column;
     align-items: center;
-    
+    /* background-color: white; */
     margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+.childrenContainer {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    /* background-color: white; */
+    /* margin-top: 100px; */
     margin-bottom: 0px;
 }
 

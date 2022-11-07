@@ -7,6 +7,9 @@
     align-items: center;
 
 }
+.ui.statistic+.ui.statistic {
+    margin-bottom: 1rem;
+}
 
 .ui.statistic.nameStat {
     width: 150px;
@@ -28,6 +31,22 @@
     /* background-color: purple; */
 }
 
+.ui.statistic.nameStat2 {
+    width: 150px;
+    /* background-color: red; */
+    /* background-color: red; */
+}
+
+.ui.statistic.nameLogoStat2 {
+    width: 150px;
+    /* background-color: blue; */
+}
+
+.ui.statistic.goalsStat2 {
+    width: 100%;
+    /* background-color: purple; */
+}
+
 
 @media screen and (max-width: 700px) {
     .ui.statistics.statsGroup {
@@ -44,7 +63,7 @@
         width: 100%;
         height: 90px;
         text-align: center;
-        padding-left: 20px;
+        /* padding-left: 20px; */
         /* background-color: red; */
         margin-right: 0px;
     }
@@ -85,7 +104,7 @@
 @media screen and (min-width: 700px) and (max-width: 990px) {
     .ui.statistics.statsGroup {
         
-        background-color: yellow;
+        /* background-color: yellow; */
     }
     
     .ui.statistic.nameStat {
