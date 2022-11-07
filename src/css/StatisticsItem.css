@@ -61,19 +61,41 @@
     }
 }
 
- @media screen and (min-width: 700px) and (max-width: 1000px) {
+@media screen and (min-width: 700px) and (max-width: 990px) {
     .ui.statistics.statsGroup {
-        display: flex;
-        justify-content: space-around;
-        margin: 0px;
-        width: 100%;
-        background-color: red;
-        align-items: center;
-    
+        
+        background-color: yellow;
     }
     
     .ui.statistic.nameStat {
-        width: 150px;
+        width: 100px;
+        /* background-color: red; */
+    }
+    
+    .ui.statistic.nameLogoStat {
+        width: 100px;
+        /* background-color: blue; */
+    }
+    
+    .ui.statistic.gamesStat {
+        width: 50px;
+        /* background-color: yellow; */
+    }
+    
+    .ui.statistic.goalsStat {
+        width: 96px;
+        /* background-color: purple; */
+    }
+}
+
+ @media screen and (min-width: 990px) and (max-width: 1145px) {
+    .ui.statistics.statsGroup {
+        
+        background-color: red;
+    }
+    
+    .ui.statistic.nameStat {
+        width: 100px;
         /* background-color: red; */
     }
     
