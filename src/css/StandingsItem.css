@@ -38,6 +38,12 @@
         margin-right: 10px;
     }
     
+    .teamInfo {
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
+    }
+    
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {

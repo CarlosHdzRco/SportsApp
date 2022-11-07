@@ -13,14 +13,42 @@
 .leagueLogoText {
     display: flex;
     align-items: center;
+    font-size: smaller;
 }
 
 .leagueInfoLogo {
     height: 60px;
+    margin-right: 20px;
 }
 
 .leagueInfoFlag {
     display: flex;
     align-self: center;
     height: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .leagueInfoLogo {
+        height: 40px;
+        margin-right: 20px;
+    }
+    
+    .leagueInfoFlag {
+        display: flex;
+        align-self: center;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    .leagueInfoLogo {
+        height: 60px;
+        margin-right: 20px;
+    }
+    
+    .leagueInfoFlag {
+        display: flex;
+        align-self: center;
+        height: 40px;
+    }
 }
