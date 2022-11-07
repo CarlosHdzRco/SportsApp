@@ -43,7 +43,8 @@
     .ui.statistic.nameStat {
         width: 100%;
         text-align: center;
-        /* background-color: red; */
+        padding-left: 20px;
+        background-color: red;
         margin-right: 0px;
     }
     
