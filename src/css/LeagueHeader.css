@@ -13,7 +13,6 @@
 .leagueLogoText {
     display: flex;
     align-items: center;
-    font-size: smaller;
 }
 
 .leagueInfoLogo {
@@ -29,7 +28,7 @@
 
 @media screen and (max-width: 700px) {
     .leagueInfoLogo {
-        height: 40px;
+        height: 30px;
         margin-right: 20px;
     }
     
@@ -38,6 +37,12 @@
         align-self: center;
         height: 20px;
     }
+    .leagueLogoText {
+        display: flex;
+        align-items: center;
+        font-size:smaller;
+    }
+    
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
