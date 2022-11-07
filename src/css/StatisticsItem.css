@@ -32,33 +32,46 @@
 @media screen and (max-width: 700px) {
     .ui.statistics.statsGroup {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         margin: 0px;
         width: 100%;
-        background-color: purple;
+        /* background-color: purple; */
         align-items: center;
     
     }
     
     .ui.statistic.nameStat {
-        width: 150px;
+        width: 100%;
+        text-align: center;
         /* background-color: red; */
+        margin-right: 0px;
     }
     
     .ui.statistic.nameLogoStat {
-        width: 150px;
-        /* background-color: blue; */
-    }
-    
-    .ui.statistic.gamesStat {
-        width: 100px;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
         /* background-color: yellow; */
     }
     
-    .ui.statistic.goalsStat {
+    .ui.statistic.gamesStat {
+        margin-top: 20px;
         width: 100px;
+        text-align: center;
+        /* background-color: brown; */
+    }
+    
+    .ui.statistic.goalsStat {
+        margin-top: 20px;
+        width: 100px;
+        text-align: center;
+        /* background-color: blue; */
         /* background-color: purple; */
     }
+    /* .ui.statistic>.value .icon, .ui.statistics .statistic>.value .icon {
+        background-color: bisque;
+        visibility: hidden;
+    } */
 }
 
 @media screen and (min-width: 700px) and (max-width: 990px) {
@@ -91,7 +104,7 @@
  @media screen and (min-width: 990px) and (max-width: 1145px) {
     .ui.statistics.statsGroup {
         
-        background-color: red;
+        /* background-color: red; */
     }
     
     .ui.statistic.nameStat {

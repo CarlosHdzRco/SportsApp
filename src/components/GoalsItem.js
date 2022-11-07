@@ -127,7 +127,7 @@ function GoalsItem({index}) {
 
                             <Statistic className='goalsStat'>
                                 <Statistic.Value>
-                                    <Icon name='soccer' />{player[index].statistics[0].goals.total}
+                                    <Icon className='soccerIcon' name='soccer' />{player[index].statistics[0].goals.total}
                                 </Statistic.Value>
                                 <Statistic.Label>Goals</Statistic.Label>
                             </Statistic>
