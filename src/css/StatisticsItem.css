@@ -39,6 +39,7 @@
 
 .ui.statistic.nameLogoStat2 {
     width: 150px;
+    /* height: 90px; */
     /* background-color: blue; */
 }
 
@@ -54,16 +55,15 @@
         justify-content: center;
         margin: 0px;
         width: 100%;
-        /* background-color: purple; */
-        align-items: center;
-    
+        /* background-color: aliceblue; */
+        align-items: center;    
     }
     
     .ui.statistic.nameStat {
         width: 100%;
         height: 90px;
         text-align: center;
-        /* padding-left: 20px; */
+        padding-left: 20px;
         /* background-color: red; */
         margin-right: 0px;
     }
@@ -89,11 +89,48 @@
     .ui.statistic.goalsStat {
         margin-top: 20px;
         height: 90px;
-
         width: 100px;
         text-align: center;
         /* background-color: blue; */
-        /* background-color: purple; */
+    }
+    .ui.statistic.nameStat2 {
+        width: 100%;
+        height: 90px;
+        text-align: center;
+        padding-left: 20px;
+        /* background-color: red; */
+        margin-right: 0px;
+    }
+    
+    .ui.statistic.nameLogoStat2 {
+        width: 100%;
+        height: 90px;
+
+        text-align: center;
+        padding-bottom: 20px;
+        /* background-color: yellow; */
+    }
+    
+    .ui.statistic.gamesStat2 {
+        margin-top: 20px;
+        height: 90px;
+
+        width: 100px;
+        text-align: center;
+        /* background-color: brown; */
+    }
+    
+    .ui.statistic.goalsStat2 {
+        margin-top: 20px;
+        height: 90px;
+        width: 100px;
+        text-align: center;
+        /* background-color: blue; */
+    }
+
+    .statsColumn {
+        transform: scale(.9);
+
     }
     /* .ui.statistic>.value .icon, .ui.statistics .statistic>.value .icon {
         background-color: bisque;
@@ -126,9 +163,34 @@
         width: 96px;
         /* background-color: purple; */
     }
+
+    .ui.statistic.nameStat2 {
+        width: 100%;
+        height: 90px;
+        text-align: center;
+        padding-left: 20px;
+        /* background-color: red; */
+        margin-right: 0px;
+    }
+    
+    .ui.statistic.nameLogoStat2 {
+        width: 100%;
+        height: 90px;
+        text-align: center;
+        padding-bottom: 20px;
+        /* background-color: yellow; */
+    }
+    
+    .ui.statistic.goalsStat2 {
+        margin-top: 20px;
+        height: 90px;
+        width: 100%;
+        text-align: center;
+        /* background-color: blue; */
+    }
 }
 
- @media screen and (min-width: 990px) and (max-width: 1145px) {
+ @media screen and (min-width: 990px) and (max-width: 1400px) {
     .ui.statistics.statsGroup {
         
         /* background-color: red; */
@@ -152,5 +214,32 @@
     .ui.statistic.goalsStat {
         width: 100px;
         /* background-color: purple; */
+    }
+
+
+    .ui.statistic.nameStat2 {
+        width: 100%;
+        height: 90px;
+        text-align: center;
+        padding-left: 20px;
+        /* background-color: red; */
+        margin-right: 0px;
+    }
+    
+    .ui.statistic.nameLogoStat2 {
+        width: 100%;
+        height: 90px;
+        text-align: center;
+        
+        /* background-color: yellow; */
+    }
+    
+    .ui.statistic.goalsStat2 {
+        margin-top: 20px;
+        padding-top: 10px;
+        height: 90px;
+        width: 100%;
+        text-align: center;
+        /* background-color: blue; */
     }
 }
