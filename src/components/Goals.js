@@ -61,50 +61,15 @@ function Goals() {
         <Grid className='statisticsContainer'>
           
           <Grid.Row className='oneColumn' columns={1}>
-            <GoalsItem index={0} /> 
-            <GoalsItem index={1} />
-            <GoalsItem index={2} />
+            {stats.playerList.slice(0,4).map((goalObj,index) => {
+              return <GoalsItem key={index} goalObj={goalObj} index={index}/>
+            })}
            </Grid.Row>
 
           <Grid.Row className='twoColumn' columns={2}>
-            <GoalsItem index={3} />
-            <GoalsItem index={4} />
-            <GoalsItem index={5} />
-            <GoalsItem index={6} />
-            <GoalsItem index={7} />
-            <GoalsItem index={8} />
-            <GoalsItem index={9} />
-            <GoalsItem index={10} />
-            <GoalsItem index={11} />
-            <GoalsItem index={12} />
-            <GoalsItem index={13} />
-            <GoalsItem index={14} />
-            <GoalsItem index={15} />
-            <GoalsItem index={16} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-
-          </Grid.Row>
-          
-          <Grid.Row columns={2}>
-
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-
+            {stats.playerList.slice(4).map((goalObj,index) => {
+              return <GoalsItem key={index} goalObj={goalObj} index={index+4}/>
+            })}
           </Grid.Row>
           
         </Grid>

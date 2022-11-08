@@ -1,11 +1,8 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { Grid, Image, Segment, Label, Statistic, Icon } from 'semantic-ui-react'
 import '../css/StatisticsItem.css'
 
-function AssistsItem({index}) {
-
-    const player = useSelector((state) => state.topAssists.playerList)
+function AssistsItem({index, assistsObj}) {
 
     if(index === 0){
         return (
@@ -18,28 +15,28 @@ function AssistsItem({index}) {
 
                             <Statistic className='nameStat'>
                                 <Statistic.Value>
-                                    <Image src={player[index].player.photo} inline circular />
+                                    <Image src={assistsObj.player.photo} inline circular />
                                 
                                 </Statistic.Value>
-                                <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                                <Statistic.Label>{assistsObj.player.name}</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='nameLogoStat'>
                                 <Statistic.Value>
-                                    <Image src={player[index].statistics[0].team.logo} inline />
+                                    <Image src={assistsObj.statistics[0].team.logo} inline />
                                 
                                 </Statistic.Value>
-                                <Statistic.Label>{player[index].statistics[0].team.name}</Statistic.Label>
+                                <Statistic.Label>{assistsObj.statistics[0].team.name}</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='gamesStat'>
-                            <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
+                            <Statistic.Value>{assistsObj.statistics[0].games.appearences}</Statistic.Value>
                             <Statistic.Label>Games</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='goalsStat'>
                                 <Statistic.Value>
-                                    <Icon name='soccer' />{player[index].statistics[0].goals.assists}
+                                    <Icon name='soccer' />{assistsObj.statistics[0].goals.assists}
                                 </Statistic.Value>
                                 <Statistic.Label>Assists</Statistic.Label>
                             </Statistic>
@@ -52,7 +49,7 @@ function AssistsItem({index}) {
           )
     }
 
-    if(index === 1 || index === 2){
+    if(index === 1 || index === 2 || index === 3){
         return (
             <>
                 <Grid.Column className='statsColumn'>
@@ -62,28 +59,28 @@ function AssistsItem({index}) {
 
                             <Statistic className='nameStat'>
                                 <Statistic.Value>
-                                    <Image src={player[index].player.photo} inline circular />
+                                    <Image src={assistsObj.player.photo} inline circular />
                                 
                                 </Statistic.Value>
-                                <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                                <Statistic.Label>{assistsObj.player.name}</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='nameLogoStat'>
                                 <Statistic.Value>
-                                    <Image src={player[index].statistics[0].team.logo} inline />
+                                    <Image src={assistsObj.statistics[0].team.logo} inline />
                                 
                                 </Statistic.Value>
-                                <Statistic.Label>{player[index].statistics[0].team.name}</Statistic.Label>
+                                <Statistic.Label>{assistsObj.statistics[0].team.name}</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='gamesStat'>
-                                <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
+                                <Statistic.Value>{assistsObj.statistics[0].games.appearences}</Statistic.Value>
                                 <Statistic.Label>Games</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='goalsStat'>
                                 <Statistic.Value>
-                                    <Icon name='soccer' />{player[index].statistics[0].goals.assists}
+                                    <Icon name='soccer' />{assistsObj.statistics[0].goals.assists}
                                 </Statistic.Value>
                                 <Statistic.Label>Assists</Statistic.Label>
                             </Statistic>
@@ -106,23 +103,23 @@ function AssistsItem({index}) {
 
                             <Statistic className='nameStat2'>
                                 <Statistic.Value>
-                                    <Image src={player[index].player.photo} inline circular />
+                                    <Image src={assistsObj.player.photo} inline circular />
                                 
                                 </Statistic.Value>
-                                <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                                <Statistic.Label>{assistsObj.player.name}</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='nameLogoStat2'>
                                 <Statistic.Value>
-                                    <Image src={player[index].statistics[0].team.logo} inline />
+                                    <Image src={assistsObj.statistics[0].team.logo} inline />
                                 
                                 </Statistic.Value>
-                                <Statistic.Label>{player[index].statistics[0].team.name}</Statistic.Label>
+                                <Statistic.Label>{assistsObj.statistics[0].team.name}</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='goalsStat2'>
                                 <Statistic.Value>
-                                    <Icon className='soccerIcon' name='soccer' />{player[index].statistics[0].goals.assists}
+                                    <Icon className='soccerIcon' name='soccer' />{assistsObj.statistics[0].goals.assists}
                                 </Statistic.Value>
                                 <Statistic.Label>Assists</Statistic.Label>
                             </Statistic>

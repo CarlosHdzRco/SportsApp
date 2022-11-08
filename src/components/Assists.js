@@ -61,52 +61,16 @@ function Assists() {
       <>
         <Grid className='statisticsContainer'>
           
-          <Grid.Row columns={1}>
-            <AssistsItem index={0} /> 
+          <Grid.Row className='oneColumn' columns={1}>
+            {stats.playerList.slice(0,4).map((assistsObj,index) => {
+              return <AssistsItem key={index} assistsObj={assistsObj} index={index}/>
+            })}
            </Grid.Row>
-  
-          <Grid.Row columns={1}>
-            <AssistsItem index={1} />
-            
-          </Grid.Row>
-          <Grid.Row columns={1}>
-            <AssistsItem index={2} />
-            
-          </Grid.Row>
 
-          <Grid.Row columns={2}>
-            <AssistsItem index={3} />
-            <AssistsItem index={4} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-            <AssistsItem index={5} />
-            <AssistsItem index={6} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-            <AssistsItem index={7} />
-            <AssistsItem index={8} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-            <AssistsItem index={9} />
-            <AssistsItem index={10} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-            <AssistsItem index={11} />
-            <AssistsItem index={12} />
-          </Grid.Row>
-          
-          <Grid.Row columns={2}>
-            <AssistsItem index={13} />
-            <AssistsItem index={14} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
-            <AssistsItem index={15} />
-            <AssistsItem index={16} />
+          <Grid.Row className='twoColumn' columns={2}>
+            {stats.playerList.slice(4).map((assistsObj,index) => {
+              return <AssistsItem key={index} assistsObj={assistsObj} index={index+4}/>
+            })}
           </Grid.Row>
           
         </Grid>
