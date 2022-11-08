@@ -49,7 +49,7 @@ function MenuChoice({children}) {
 
     const dispatch = useDispatch()
     const league = useSelector((state) => state.leagueId)
-    const [activeItem, setActiveItem] = useState('')
+    const [activeItem, setActiveItem] = useState('Standings')
 
     const handleItemClick = (e) => {
         // console.log(e.target.innerText)
@@ -81,7 +81,7 @@ function MenuChoice({children}) {
     <>
       <div className='menuContainer'>
         <Dropdown className='DropDownChoice'
-          placeholder='Select Friend'
+          placeholder='Select League'
           fluid
           selection
           options={leagueOptions}

@@ -5,7 +5,7 @@ import '../css/StatChoice.css'
 
 function StatChoice() {
 
-    const [activeItem, setActiveItem] = useState('')
+    const [activeItem, setActiveItem] = useState('Goals')
 
     const handleItemClick = (e) => {
         console.log(e.target.innerText)
