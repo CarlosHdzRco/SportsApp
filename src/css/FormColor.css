@@ -18,19 +18,19 @@
     .win {
         color: green;
         font-weight: 400;
-        font-size: .4rem;
+        font-size: .5rem;
     }
     
     .loss {
         color: red;
         font-weight: 400;
-        font-size: .4rem;
+        font-size: .5rem;
     }
     
     .draw {
         color: gray;
         font-weight: 400;
-        font-size: .4rem;
+        font-size: .5rem;
     }
     
 }
@@ -40,7 +40,7 @@
     .win {
         color: green;
         font-weight: 400;
-        font-size: .5rem;
+        font-size: .6rem;
         /* background-color: red; */
         
     }
@@ -48,14 +48,14 @@
     .loss {
         color: red;
         font-weight: 400;
-        font-size: .5rem;
+        font-size: .6rem;
 
     }
     
     .draw {
         color: gray;
         font-weight: 400;
-        font-size: .5rem;
+        font-size: .6rem;
 
     }
 }
