@@ -1,22 +1,19 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Grid, Image, Segment, Label, Statistic, Icon, Item } from 'semantic-ui-react'
+import { Grid, Image, Segment, Label, Statistic, Icon } from 'semantic-ui-react'
 import '../css/StatisticsItem.css'
 
 function AssistsItem({index}) {
 
     const player = useSelector((state) => state.topAssists.playerList)
-    // console.log('player: ',player)
-    // console.log('playerIndex: ', player[index])
-    // console.log('in StatisticsItem Component')
-
 
     if(index === 0){
         return (
             <>
                 <Grid.Column className='statsColumn'>
-                    <Segment >
-                    <Label color='green' attached='top left'>{index+1}</Label>
+                    <Segment>
+                        
+                        <Label color='green' attached='top left'>{index+1}</Label>
                         <Statistic.Group className='statsGroup' size='small'>
 
                             <Statistic className='nameStat'>
@@ -48,8 +45,7 @@ function AssistsItem({index}) {
                             </Statistic>
 
                         </Statistic.Group>
-                    
-                        
+
                     </Segment>
                 </Grid.Column>
             </>
@@ -60,8 +56,8 @@ function AssistsItem({index}) {
         return (
             <>
                 <Grid.Column className='statsColumn'>
-                    <Segment >
-                    <Label color='yellow' attached='top left'>{index+1}</Label>
+                    <Segment>
+                        <Label color='yellow' attached='top left'>{index+1}</Label>
                         <Statistic.Group className='statsGroup' size='small'>
 
                             <Statistic className='nameStat'>
@@ -81,8 +77,8 @@ function AssistsItem({index}) {
                             </Statistic>
 
                             <Statistic className='gamesStat'>
-                            <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
-                            <Statistic.Label>Games</Statistic.Label>
+                                <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
+                                <Statistic.Label>Games</Statistic.Label>
                             </Statistic>
 
                             <Statistic className='goalsStat'>
@@ -94,7 +90,6 @@ function AssistsItem({index}) {
 
                         </Statistic.Group>
                     
-                        
                     </Segment>
                 </Grid.Column>
             </>
@@ -105,8 +100,8 @@ function AssistsItem({index}) {
         return (
             <>
                 <Grid.Column className='statsColumn'>
-                    <Segment >
-                    <Label color='red' attached='top left'>{index+1}</Label>
+                    <Segment>
+                        <Label color='red' attached='top left'>{index+1}</Label>
                         <Statistic.Group className='statsGroup' size='small'>
 
                             <Statistic className='nameStat2'>

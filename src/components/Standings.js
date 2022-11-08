@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import { updateLeagueInfo, addStandings, updateLeagueId, updateActiveItem } from '../actions/actions'
+import { updateLeagueInfo, addStandings, updateActiveItem } from '../actions/actions'
 import { Table, Loader} from 'semantic-ui-react'
 import TableHeader from './TableHeader'
 import StandingsItem from './StandingsItem'
@@ -14,11 +14,12 @@ function Standings() {
   const standings = useSelector((state) => state.standings)
   const [loaded, setLoaded] = useState(false)
 
-
   useEffect(() => {
-    console.log('standings use effect')
+
+    //update active item for menu
     dispatch(updateActiveItem('Standings'))
 
+    //api call definition
     const apiCall = async() => {
       await fetch(`https://v3.football.api-sports.io/standings?league=${leagueId}&season=2022`, {
         "method": "GET",
@@ -28,7 +29,7 @@ function Standings() {
       }).then((response) => response.json())
       .then((data) => {
       
-        //dispatch league info into global leagueInfo state
+        //update league info into global leagueInfo state
         dispatch(updateLeagueInfo({ 
           country: data.response[0].league.country,
           flag: data.response[0].league.flag,
@@ -37,12 +38,14 @@ function Standings() {
           season: data.response[0].league.season
         }))
 
-        //dispatch standings info into global standings state
+        //add standings info into global standings state
         dispatch(addStandings(data.response[0].league.id, data.response[0].league.standings[0]))
+        
         setLoaded(true)
       })
     }     
 
+    //make api call if global league id is different than standings league state
     if(String(leagueId) !== String(standings.league)) {
       apiCall()
     }
@@ -55,9 +58,7 @@ function Standings() {
   if(loaded === true) {
     return (
       <div className='standingsContainer'>
-  
-        
-        {/* Table Standings */}
+
         <Table striped unstackable>
           <TableHeader />
           <Table.Body>

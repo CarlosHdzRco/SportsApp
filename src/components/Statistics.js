@@ -10,10 +10,8 @@ function Statistics() {
       <StatChoice />
 
       <Outlet />
-
     </> 
   )
 }
-
 
 export default Statistics

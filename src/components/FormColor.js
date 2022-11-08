@@ -1,5 +1,4 @@
 import React from 'react'
-import {useDispatch, useSelector} from 'react-redux'
 import '../css/FormColor.css'
 
 function FormColor({formLetter}) {

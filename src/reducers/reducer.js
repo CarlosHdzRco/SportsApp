@@ -27,20 +27,16 @@ export const reducer = (state, action) => {
                 leagueInfo: action.leagueInfo
             }
         case 'ADD_STANDINGS':
-            // console.log('reducer: ',action.id)
-            // console.log('reducer: ',action.standingsList )
             return {
                 ...state,
                 standings: {league: action.id, standingsList: action.standingsList}
             }
         case 'ADD_GOALS':
-            // console.log(action.statisticsList)
             return {
                 ...state,
                 topGoals: {league: action.id, playerList: action.statisticsList}
             }
         case 'ADD_ASSISTS':
-            // console.log(action.statisticsList)
             return {
                 ...state,
                 topAssists: {league: action.id, playerList: action.statisticsList}
@@ -56,7 +52,6 @@ export const reducer = (state, action) => {
                 activeItem: action.activeItem
             }
         case 'UPDATE_STANDINGS_ACTIVE_ITEM':
-            console.log('active item standings: ', action.activeItem)
             return {
                 ...state,
                 standingsActiveItem: action.activeItem

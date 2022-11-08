@@ -6,11 +6,8 @@ import { addMatches } from '../actions/actions'
 import MatchesItem from './MatchesItem'
 import { updateLeagueInfo, updateActiveItem } from '../actions/actions'
 
-
-
 function Matches() {
 
-  const leagueInfo = useSelector((state) => state.leagueInfo)
   const matches = useSelector((state) => state.matches)
   const leagueId = useSelector((state) => state.leagueId)
   const dispatch = useDispatch()
@@ -32,7 +29,7 @@ function Matches() {
 
         console.log('data: ',data.response[0].league)
         
-        //dispatch league info into global leagueInfo state
+        //update league info into global leagueInfo state
         dispatch(updateLeagueInfo({ 
           country: data.response[0].league.country,
           flag: data.response[0].league.flag,
@@ -41,33 +38,35 @@ function Matches() {
           season: data.response[0].league.season
         }))
 
-        //dispatch matches info into global matches state
+        //add matches info into global matches state
         dispatch(addMatches(leagueId, data.response))
+        
         setLoaded(true)
+        
       })
-
     }
 
+    //make api call if global league id is different than matches league state
     if(String(leagueId) !== String(matches.league)) {
       apiCall()
     }
     else {
       setLoaded(true)
     }
+
   }, [leagueId])
 
   if(loaded === true) {
     return (
       <div className='matchesContainer'>
+        
         <Grid celled='internally'>
           {matches.matchesList.map((matchObj) => {
             return <MatchesItem key={matchObj.id} matchObj={matchObj}/>
-          })
-
-          }
+          })}
         </Grid>
+
       </div>
-      
     )
   }
   else {

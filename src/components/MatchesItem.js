@@ -3,7 +3,8 @@ import { Grid, Image, Statistic } from 'semantic-ui-react'
 import '../css/MatchesItem.css'
 
 function MatchesItem({matchObj}) {
-    // console.log(matchObj)
+
+    //get date and time from date string
     const date = matchObj.fixture.date.slice(0,10)
     const time = matchObj.fixture.date.slice(11,16)
 
@@ -13,6 +14,7 @@ function MatchesItem({matchObj}) {
             <Grid.Column width={3}>
                 <Image className='teamLogo' src={matchObj.teams.home.logo} />
             </Grid.Column>
+            
             <Grid.Column  width={10}>
                 <div className='matchMiddleContent'>
                     <Statistic size='tiny'>
@@ -28,9 +30,8 @@ function MatchesItem({matchObj}) {
                         {matchObj.fixture.venue.name}
                     </div>
                 </div>
-                
-
             </Grid.Column>
+            
             <Grid.Column width={3}>
                 <Image src={matchObj.teams.away.logo} />
             </Grid.Column>

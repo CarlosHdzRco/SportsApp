@@ -13,7 +13,6 @@
 
 .ui.statistic.nameStat {
     width: 150px;
-    /* padding-left: 20px; */
     /* background-color: red; */
 }
 
@@ -37,16 +36,12 @@
 
 .ui.statistic.nameStat2 {
     width: 150px;
-    
-    /* background-color: red; */
     /* background-color: red; */
 }
 
 .ui.statistic.nameLogoStat2 {
     width: 150px;
     padding-bottom: 20px;
-
-    /* height: 90px; */
     /* background-color: blue; */
 }
 
@@ -86,7 +81,6 @@
     .ui.statistic.gamesStat {
         margin-top: 20px;
         height: 90px;
-        /* padding-right: 60px; */
         width: 70px;
         text-align: center;
         /* background-color: brown; */
@@ -97,7 +91,6 @@
         height: 90px;
         width: 120px;
         padding-right: 20px;
-        /* margin-right: 20px; */
         text-align: center;
         /* background-color: blue; */
     }
@@ -106,7 +99,6 @@
         height: 90px;
         text-align: center;
         padding-left: 0px;
-        
         /* background-color: red; */
         margin-right: 0px;
     }
@@ -115,9 +107,7 @@
         width: 100%;
         height: 90px;
         padding-right: 20px;
-
         text-align: center;
-        /* padding-bottom: 20px; */
         /* background-color: yellow; */
     }
     
@@ -135,17 +125,9 @@
         transform: scale(.9);
 
     }
-    /* .ui.statistic>.value .icon, .ui.statistics .statistic>.value .icon {
-        background-color: bisque;
-        visibility: hidden;
-    } */
 }
 
 @media screen and (min-width: 700px) and (max-width: 990px) {
-    .ui.statistics.statsGroup {
-        
-        /* background-color: yellow; */
-    }
     
     .ui.statistic.nameStat {
         width: 100px;
@@ -171,8 +153,6 @@
         width: 100%;
         height: 90px;
         text-align: center;
-        /* padding-left: 20px; */
-
         /* background-color: red; */
         margin-right: 0px;
     }
@@ -197,11 +177,6 @@
 }
 
  @media screen and (min-width: 990px) and (max-width: 1400px) {
-    .ui.statistics.statsGroup {
-        
-        /* background-color: red; */
-    }
-    
     .ui.statistic.nameStat {
         width: 100px;
         /* background-color: red; */
@@ -222,7 +197,6 @@
         /* background-color: purple; */
     }
 
-
     .ui.statistic.nameStat2 {
         width: 100%;
         height: 90px;
@@ -236,7 +210,6 @@
         width: 100%;
         height: 90px;
         text-align: center;
-        
         /* background-color: yellow; */
     }
     

@@ -13,15 +13,13 @@ function Assists() {
   const dispatch = useDispatch()
   const [loaded, setLoaded] = useState(false)
 
-  // console.log('rows: ', rows[0])
-  // console.log('stats: ', stats)
-
   //UseEffect Hook
   useEffect(() => {
+    //update menu active items
     dispatch(updateActiveItem('Stats'))
     dispatch(updateStandingsActiveItem('Assists'))
 
-
+    //api call definition
     const apiCall = async() => {
       await fetch(`https://v3.football.api-sports.io/players/topassists?league=${leagueId}&season=2022`, {
         "method": "GET",
@@ -32,9 +30,7 @@ function Assists() {
       .then((response) => response.json())
       .then((data) => {
 
-        // console.log('data: ',data.response[0].statistics[0].league)
-        
-        // dispatch league info into global leagueInfo state
+        //update league info into global leagueInfo state
         dispatch(updateLeagueInfo({ 
           country: data.response[0].statistics[0].league.country,
           flag: data.response[0].statistics[0].league.flag,
@@ -43,12 +39,14 @@ function Assists() {
           season: data.response[0].statistics[0].league.season
         }))
 
-        //dispatch league info into global leagueInfo state
+        //add assists object and league id into global leagueInfo state
         dispatch(addAssists(leagueId, data.response))
-        setLoaded(true)
-      })
+          setLoaded(true)
+        })
 
     }
+
+    //make api call if global id is not same as stats league
     if(String(leagueId) !== String(stats.league)) {
       apiCall()
     }
@@ -110,9 +108,7 @@ function Assists() {
             <AssistsItem index={15} />
             <AssistsItem index={16} />
           </Grid.Row>
-
           
-
         </Grid>
       </> 
     )
