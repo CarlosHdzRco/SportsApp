@@ -18,19 +18,19 @@
     .win {
         color: green;
         font-weight: 400;
-        font-size: .5rem;
+        font-size: .4rem;
     }
     
     .loss {
         color: red;
         font-weight: 400;
-        font-size: .5rem;
+        font-size: .4rem;
     }
     
     .draw {
         color: gray;
         font-weight: 400;
-        font-size: .5rem;
+        font-size: .4rem;
     }
     
 }
