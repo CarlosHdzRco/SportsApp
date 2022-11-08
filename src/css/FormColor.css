@@ -13,3 +13,49 @@
     color: gray;
     font-weight: 700;
 }
+
+@media screen and (max-width: 700px) {
+    .win {
+        color: green;
+        font-weight: 400;
+        font-size: .5rem;
+    }
+    
+    .loss {
+        color: red;
+        font-weight: 400;
+        font-size: .5rem;
+    }
+    
+    .draw {
+        color: gray;
+        font-weight: 400;
+        font-size: .5rem;
+    }
+    
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .win {
+        color: green;
+        font-weight: 400;
+        font-size: .5rem;
+        /* background-color: red; */
+        
+    }
+    
+    .loss {
+        color: red;
+        font-weight: 400;
+        font-size: .5rem;
+
+    }
+    
+    .draw {
+        color: gray;
+        font-weight: 400;
+        font-size: .5rem;
+
+    }
+}
