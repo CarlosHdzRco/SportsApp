@@ -28,7 +28,7 @@
     height: 40px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 500px) and (max-width: 700px) {
     .leagueInfoLogo {
         height: 30px;
         margin-right: 20px;
@@ -43,27 +43,27 @@
         display: flex;
         align-items: center;
         font-size:smaller;
-        background-color: red;
+        /* background-color: red; */
     }
     
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
     .leagueInfoLogo {
-        height: 30px;
-        margin-right: 20px;
+        height: 20px;
+        margin-right: 10px;
     }
     
     .leagueInfoFlag {
         display: flex;
         align-self: center;
-        height: 20px;
+        height: 15px;
     }
     .leagueLogoText {
         display: flex;
         align-items: center;
-        font-size:smaller;
-        background-color: blue;
+        font-size:1rem;
+        /* background-color: blue; */
     }
     
 }
