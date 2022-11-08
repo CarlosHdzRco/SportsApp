@@ -14,7 +14,7 @@ function LeagueHeader() {
     {/* League Header */}
         <Header as='h2' className='leagueInfo'>
             <div className='leagueLogoText'>
-            <Image className='leagueInfoLogo' src={leagueInfo.logo}/> 
+            <Image className='leagueInfoLogo' src={leagueInfo.logo}/>
             {leagueInfo.name}
             </div>
             <div className='leagueInfoFlag'>

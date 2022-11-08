@@ -1,5 +1,6 @@
 .standingsContainer {
     width: 70%;
+    margin-top: 20px;
 
 }
 
@@ -7,14 +8,14 @@
     .standingsContainer {
         width: 95%;
         /* background-color: blue; */
-        margin-top: 20px;
+        /* margin-top: 20px; */
         font-size:xx-small;
     }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
     .standingsContainer {
-        margin-top: 0;
+        /* margin-top: 0; */
         font-size:small
     }
 }
