@@ -73,14 +73,14 @@
 
 @media screen and (max-width: 500px) {
     .leagueInfoLogo {
-        height: 35px;
+        height: 10px;
         margin-right: 10px;
     }
     
     .leagueInfoFlag {
         display: flex;
         align-self: center;
-        height: 27px;
+        height: 5px;
 
     }
     .leagueLogoText {
@@ -94,7 +94,7 @@
     .leaguInfoText {
         display: flex;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 700;
     }
     
