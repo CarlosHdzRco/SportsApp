@@ -58,6 +58,7 @@
         display: flex;
         align-self: center;
         height: 15px;
+        visibility: hidden;
     }
     .leagueLogoText {
         display: flex;
