@@ -37,7 +37,7 @@ function ButtonWrapper({currency}) {
                             },
                             items: [
                                 {
-                                    name: "donation-example",
+                                    name: "Creator Donation",
                                     quantity: "1",
                                     unit_amount: {
                                         currency_code: "USD",

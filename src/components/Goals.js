@@ -75,6 +75,11 @@ function Goals() {
           
         </Grid>
 
+
+        <div className='supportText'>
+          <h3>Support the creator</h3>
+        </div>
+        
         <div className='donateButton'>
           <DonateButton />
         </div>
