@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import '../css/Matches.css'
-import { Grid, Image, Dimmer, Loader } from 'semantic-ui-react'
+import { Grid, Loader } from 'semantic-ui-react'
 import {useDispatch, useSelector} from 'react-redux'
 import { addMatches } from '../actions/actions'
 import MatchesItem from './MatchesItem'
@@ -27,8 +27,6 @@ function Matches() {
       .then((response) => response.json())
       .then((data) => {
 
-        console.log('data: ',data.response[0].league)
-        
         //update league info into global leagueInfo state
         dispatch(updateLeagueInfo({ 
           country: data.response[0].league.country,
@@ -62,7 +60,7 @@ function Matches() {
         
         <Grid celled='internally'>
           {matches.matchesList.map((matchObj) => {
-            return <MatchesItem key={matchObj.id} matchObj={matchObj}/>
+            return <MatchesItem key={matchObj.fixture.id} matchObj={matchObj}/>
           })}
         </Grid>
 

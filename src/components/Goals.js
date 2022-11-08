@@ -60,52 +60,51 @@ function Goals() {
       <>
         <Grid className='statisticsContainer'>
           
-          <Grid.Row columns={1}>
+          <Grid.Row className='oneColumn' columns={1}>
             <GoalsItem index={0} /> 
-           </Grid.Row>
-  
-          <Grid.Row columns={1}>
             <GoalsItem index={1} />
-            
-          </Grid.Row>
-          <Grid.Row columns={1}>
             <GoalsItem index={2} />
-            
-          </Grid.Row>
+           </Grid.Row>
 
-          <Grid.Row columns={2}>
+          <Grid.Row className='twoColumn' columns={2}>
             <GoalsItem index={3} />
             <GoalsItem index={4} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
             <GoalsItem index={5} />
             <GoalsItem index={6} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
             <GoalsItem index={7} />
             <GoalsItem index={8} />
-          </Grid.Row>
-
-          <Grid.Row columns={2}>
             <GoalsItem index={9} />
             <GoalsItem index={10} />
+            <GoalsItem index={11} />
+            <GoalsItem index={12} />
+            <GoalsItem index={13} />
+            <GoalsItem index={14} />
+            <GoalsItem index={15} />
+            <GoalsItem index={16} />
           </Grid.Row>
 
           <Grid.Row columns={2}>
-            <GoalsItem index={11} />
-            <GoalsItem index={12} />
+
+          </Grid.Row>
+
+          <Grid.Row columns={2}>
+
+          </Grid.Row>
+
+          <Grid.Row columns={2}>
+
+          </Grid.Row>
+
+          <Grid.Row columns={2}>
+
           </Grid.Row>
           
           <Grid.Row columns={2}>
-            <GoalsItem index={13} />
-            <GoalsItem index={14} />
+
           </Grid.Row>
 
           <Grid.Row columns={2}>
-            <GoalsItem index={15} />
-            <GoalsItem index={16} />
+
           </Grid.Row>
           
         </Grid>

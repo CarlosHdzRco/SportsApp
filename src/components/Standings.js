@@ -63,7 +63,7 @@ function Standings() {
           <TableHeader />
           <Table.Body>
             {standings.standingsList.map((teamObj) => {
-              return <StandingsItem key={teamObj.id} teamObj={teamObj}/>
+              return <StandingsItem key={teamObj.team.id} teamObj={teamObj}/>
             })}
           </Table.Body>
         </Table>

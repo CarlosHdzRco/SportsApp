@@ -8,6 +8,14 @@
     margin-top: 20px;
 }
 
+div.two.column.row.twoColumn {
+    padding: 0;
+}
+
+div.one.column.row.oneColumn {
+    padding: 0;
+}
+
 
 @media screen and (max-width: 700px) {
     .statisticsContainer {

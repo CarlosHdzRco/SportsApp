@@ -30,8 +30,8 @@ function StandingsItem({teamObj}) {
             <Table.Cell>{teamObj.goalsDiff}</Table.Cell>
             <Table.Cell>{teamObj.points}</Table.Cell>
             <Table.Cell>
-                {teamObj.form.split('').map((formLetter)=> {
-                    return <FormColor formLetter={formLetter} />
+                {teamObj.form.split('').map((formLetter, index)=> {
+                    return <FormColor key={index} formLetter={formLetter} />
                 })}
             </Table.Cell>
 
