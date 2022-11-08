@@ -2,7 +2,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    /* background-color: white; */
+    /* background-color: red; */
     margin-top: 100px;
     margin-bottom: 0px;
 }
@@ -42,5 +42,16 @@
 
 .ui.dropdown .menu>.item {
     width: 100%;
+    
+}
+
+@media screen and (max-width: 500px) {
+    .ui.fluid.selection.dropdown {
+        width: 90%;
+    }
+    .ui.MenuChoice.menu {
+        margin: 0px;
+        width: 90%;
+    }
     
 }
