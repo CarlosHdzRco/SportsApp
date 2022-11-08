@@ -1,0 +1,15 @@
+.dropdown {
+    width: 80%;
+    font-weight: 700;
+    font-family: 'Titillium Web', sans-serif;
+
+}
+
+.soccerStats {
+    width: 20%;
+}
+
+.statsText {
+    font-weight: 700;
+    font-family: 'Titillium Web', sans-serif;
+}

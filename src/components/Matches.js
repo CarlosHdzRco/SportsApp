@@ -4,6 +4,7 @@ import { Grid, Loader } from 'semantic-ui-react'
 import {useDispatch, useSelector} from 'react-redux'
 import { addMatches } from '../actions/actions'
 import MatchesItem from './MatchesItem'
+import DonateButton from './DonateButton'
 import { updateLeagueInfo, updateActiveItem } from '../actions/actions'
 
 function Matches() {
@@ -64,6 +65,10 @@ function Matches() {
           })}
         </Grid>
 
+
+        <div className='donateButton'>
+          <DonateButton />
+        </div>
       </div>
     )
   }

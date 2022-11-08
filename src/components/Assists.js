@@ -3,6 +3,7 @@ import {Grid} from 'semantic-ui-react'
 import {useDispatch, useSelector} from 'react-redux'
 import { addAssists } from '../actions/actions'
 import AssistsItem from './AssistsItem'
+import DonateButton from './DonateButton'
 import '../css/Statistics.css'
 import { updateLeagueInfo, updateActiveItem, updateStandingsActiveItem } from '../actions/actions'
 
@@ -74,6 +75,10 @@ function Assists() {
           </Grid.Row>
           
         </Grid>
+
+        <div className='donateButton'>
+          <DonateButton />
+        </div>
       </> 
     )
   }

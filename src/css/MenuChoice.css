@@ -43,6 +43,16 @@
     width: 100%; 
 }
 
+.donateButton {
+    margin-top: 100px;
+    /* background-color: red; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    height: 60px;
+}
+
 @media screen and (max-width: 500px) {
     .ui.fluid.selection.dropdown {
         width: 90%;

@@ -3,6 +3,7 @@ import { Grid } from 'semantic-ui-react'
 import {useDispatch, useSelector} from 'react-redux'
 import { addGoals, updateActiveItem, updateLeagueInfo, updateStandingsActiveItem } from '../actions/actions'
 import GoalsItem from './GoalsItem'
+import DonateButton from './DonateButton'
 import '../css/Statistics.css'
 
 function Goals() {
@@ -73,6 +74,10 @@ function Goals() {
           </Grid.Row>
           
         </Grid>
+
+        <div className='donateButton'>
+          <DonateButton />
+        </div>
       </> 
     )
   }

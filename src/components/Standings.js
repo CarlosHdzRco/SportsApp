@@ -4,6 +4,7 @@ import { updateLeagueInfo, addStandings, updateActiveItem } from '../actions/act
 import { Table, Loader} from 'semantic-ui-react'
 import TableHeader from './TableHeader'
 import StandingsItem from './StandingsItem'
+import DonateButton from './DonateButton'
 import '../css/Standings.css'
 
 
@@ -67,6 +68,10 @@ function Standings() {
             })}
           </Table.Body>
         </Table>
+
+        <div className='donateButton'>
+          <DonateButton />
+        </div>
   
       </div>
     )
