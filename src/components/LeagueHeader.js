@@ -11,19 +11,14 @@ function LeagueHeader() {
 
   return (
     <div className='leagueHeaderContainer'>
-
-      <div className='leagueLogoText'>
         <Image className='leagueInfoLogo' src={leagueInfo.logo}/>
         <div className='leaguInfoText'>
           {leagueInfo.name}
         </div>
-      </div>
-      
-      <div className='leagueInfoFlag'>
-        <Image src={leagueInfo.flag}/>
-      </div>
-        
+        <Image className='leagueInfoFlag' src={leagueInfo.flag}/>
+
     </div>
+
   )
 }
 

@@ -1,13 +1,11 @@
 .leagueHeaderContainer {
     display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
     width: 70%;
     margin-top: 0px;
     padding-top: 10px;
+    display: flex;
+    justify-content: center;
     /* background-color: white; */
-    /* margin-bottom: 60px; */
-    /* border-bottom: 1px solid gray; */
 }
 
 .leagueInfo {
@@ -15,14 +13,10 @@
     /* justify-content: space-between; */
 }
 
-.leagueLogoText {
-    display: flex;
-    
-}
-
 .leagueInfoLogo {
     height: 60px;
     margin-right: 20px;
+
 }
 
 .leaguInfoText {
@@ -30,12 +24,15 @@
     align-items: center;
     font-size: 2rem;
     font-weight: 700;
+    margin-right: 20px;
+
 }
 
 .leagueInfoFlag {
     display: flex;
     align-self: center;
     height: 40px;
+
 }
 
 .ui.header.leagueInfoFlag {
@@ -55,14 +52,8 @@
         align-self: center;
         height: 30px;
     }
-    .leagueLogoText {
-        display: flex;
-        /* align-items: center; */
-        /* font-size:smaller; */
-        /* background-color: yellow; */
-    }
 
-    .leaguInfoText {
+    .leagueInfoText {
         display: flex;
         align-items: center;
         font-size: 1.7rem;
@@ -73,14 +64,14 @@
 
 @media screen and (max-width: 500px) {
     .leagueInfoLogo {
-        height: 10px;
-        margin-right: 10px;
+        height: 25px;
+        margin-right: 20px;
     }
     
     .leagueInfoFlag {
         display: flex;
         align-self: center;
-        height: 5px;
+        height: 20px;
 
     }
     .leagueLogoText {
