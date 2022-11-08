@@ -61,12 +61,16 @@ function Assists() {
         <Grid className='statisticsContainer'>
           
           <Grid.Row columns={1}>
-            <AssistsItem index={0} type='topAssists'/> 
+            <AssistsItem index={0} /> 
            </Grid.Row>
   
-          <Grid.Row columns={2}>
+          <Grid.Row columns={1}>
             <AssistsItem index={1} />
+            
+          </Grid.Row>
+          <Grid.Row columns={1}>
             <AssistsItem index={2} />
+            
           </Grid.Row>
 
           <Grid.Row columns={2}>
@@ -74,31 +78,37 @@ function Assists() {
             <AssistsItem index={4} />
           </Grid.Row>
 
-          <Grid.Row columns={3}>
+          <Grid.Row columns={2}>
             <AssistsItem index={5} />
             <AssistsItem index={6} />
-            <AssistsItem index={7} />
           </Grid.Row>
 
-          <Grid.Row columns={3}>
+          <Grid.Row columns={2}>
+            <AssistsItem index={7} />
             <AssistsItem index={8} />
+          </Grid.Row>
+
+          <Grid.Row columns={2}>
             <AssistsItem index={9} />
             <AssistsItem index={10} />
-            
-          </Grid.Row>
-          
-          <Grid.Row columns={3}>
-            <AssistsItem index={11} />
-            <AssistsItem index={12} />
-            <AssistsItem index={13} />         
           </Grid.Row>
 
-          <Grid.Row columns={3}>
+          <Grid.Row columns={2}>
+            <AssistsItem index={11} />
+            <AssistsItem index={12} />
+          </Grid.Row>
+          
+          <Grid.Row columns={2}>
+            <AssistsItem index={13} />
             <AssistsItem index={14} />
+          </Grid.Row>
+
+          <Grid.Row columns={2}>
             <AssistsItem index={15} />
             <AssistsItem index={16} />
           </Grid.Row>
 
+          
 
         </Grid>
       </> 

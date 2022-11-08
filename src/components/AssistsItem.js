@@ -17,32 +17,38 @@ function AssistsItem({index}) {
                 <Grid.Column className='statsColumn'>
                     <Segment >
                     <Label color='green' attached='top left'>{index+1}</Label>
-                        <div className='statsFlex'>
-                            <Image circular className='playerPicTop' src={player[index].player.photo} />
-                            <Statistic.Group size='huge'>
+                        <Statistic.Group className='statsGroup' size='small'>
 
-                                <Statistic>
-                                    <Statistic.Value>
-                                        <Image src={player[index].statistics[0].team.logo} inline />
-                                    
-                                    </Statistic.Value>
-                                    <Statistic.Label>{player[index].player.name}</Statistic.Label>
-                                </Statistic>
-
-                                <Statistic>
-                                <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
-                                <Statistic.Label>Games</Statistic.Label>
-                                </Statistic>
-
-                                <Statistic>
-                                    <Statistic.Value>
-                                        {player[index].statistics[0].goals.assists}
-                                    </Statistic.Value>
-                                    <Statistic.Label>Assists</Statistic.Label>
-                                </Statistic>
+                            <Statistic className='nameStat'>
+                                <Statistic.Value>
+                                    <Image src={player[index].player.photo} inline circular />
                                 
-                            </Statistic.Group>
-                        </div>
+                                </Statistic.Value>
+                                <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                            </Statistic>
+
+                            <Statistic className='nameLogoStat'>
+                                <Statistic.Value>
+                                    <Image src={player[index].statistics[0].team.logo} inline />
+                                
+                                </Statistic.Value>
+                                <Statistic.Label>{player[index].statistics[0].team.name}</Statistic.Label>
+                            </Statistic>
+
+                            <Statistic className='gamesStat'>
+                            <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
+                            <Statistic.Label>Games</Statistic.Label>
+                            </Statistic>
+
+                            <Statistic className='goalsStat'>
+                                <Statistic.Value>
+                                    <Icon name='soccer' />{player[index].statistics[0].goals.assists}
+                                </Statistic.Value>
+                                <Statistic.Label>Assists</Statistic.Label>
+                            </Statistic>
+
+                        </Statistic.Group>
+                    
                         
                     </Segment>
                 </Grid.Column>
@@ -50,41 +56,46 @@ function AssistsItem({index}) {
           )
     }
 
-    if(index === 1 || index === 2 || index === 3 || index === 4){
+    if(index === 1 || index === 2){
         return (
             <>
                 <Grid.Column className='statsColumn'>
-                    {/* <Image src={player.photo} /> */}
-                    <Segment>
-                        <Label color='yellow' attached='top left'>{index+1}</Label>
-                        <div className='statsFlex'>
-                        <Image circular className='playerPicSecond' src={player[index].player.photo} />
-                        <Statistic.Group>
+                    <Segment >
+                    <Label color='yellow' attached='top left'>{index+1}</Label>
+                        <Statistic.Group className='statsGroup' size='small'>
 
-                        <Statistic>
-                            <Statistic.Value>
-                                <Image src={player[index].statistics[0].team.logo} inline />
-                            
-                            </Statistic.Value>
-                            <Statistic.Label>{player[index].player.name}</Statistic.Label>
-                        </Statistic>
+                            <Statistic className='nameStat'>
+                                <Statistic.Value>
+                                    <Image src={player[index].player.photo} inline circular />
+                                
+                                </Statistic.Value>
+                                <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                            </Statistic>
 
-                        <Statistic>
+                            <Statistic className='nameLogoStat'>
+                                <Statistic.Value>
+                                    <Image src={player[index].statistics[0].team.logo} inline />
+                                
+                                </Statistic.Value>
+                                <Statistic.Label>{player[index].statistics[0].team.name}</Statistic.Label>
+                            </Statistic>
+
+                            <Statistic className='gamesStat'>
                             <Statistic.Value>{player[index].statistics[0].games.appearences}</Statistic.Value>
                             <Statistic.Label>Games</Statistic.Label>
-                        </Statistic>
+                            </Statistic>
 
-                        <Statistic>
-                            <Statistic.Value>
-                                {player[index].statistics[0].goals.assists}
-                            </Statistic.Value>
-                            <Statistic.Label>Assists</Statistic.Label>
-                        </Statistic>
+                            <Statistic className='goalsStat'>
+                                <Statistic.Value>
+                                    <Icon name='soccer' />{player[index].statistics[0].goals.assists}
+                                </Statistic.Value>
+                                <Statistic.Label>Assists</Statistic.Label>
+                            </Statistic>
 
                         </Statistic.Group>
-                        </div>
+                    
+                        
                     </Segment>
-
                 </Grid.Column>
             </>
           )
@@ -94,33 +105,37 @@ function AssistsItem({index}) {
         return (
             <>
                 <Grid.Column className='statsColumn'>
-                    {/* <Image src={player.photo} /> */}
-                    <Segment>
-                        <Label color='red' attached='top left'>{index+1}</Label>
-                        
-                        <div className='statsFlex'>
-                        <Image circular className='playerPicRest' src={player[index].player.photo} />
-                        <Statistic.Group size='mini'>
+                    <Segment >
+                    <Label color='red' attached='top left'>{index+1}</Label>
+                        <Statistic.Group className='statsGroup' size='small'>
 
-                        <Statistic>
-                            <Statistic.Value>
-                                <Image src={player[index].statistics[0].team.logo} inline />
-                            
-                            </Statistic.Value>
-                            <Statistic.Label>{player[index].player.name}</Statistic.Label>
-                        </Statistic>
-                        
-                        <Statistic>
-                            <Statistic.Value>
-                                {player[index].statistics[0].goals.assists}
-                            </Statistic.Value>
-                            <Statistic.Label>Assists</Statistic.Label>
-                        </Statistic>
+                            <Statistic className='nameStat2'>
+                                <Statistic.Value>
+                                    <Image src={player[index].player.photo} inline circular />
+                                
+                                </Statistic.Value>
+                                <Statistic.Label>{player[index].player.name}</Statistic.Label>
+                            </Statistic>
+
+                            <Statistic className='nameLogoStat2'>
+                                <Statistic.Value>
+                                    <Image src={player[index].statistics[0].team.logo} inline />
+                                
+                                </Statistic.Value>
+                                <Statistic.Label>{player[index].statistics[0].team.name}</Statistic.Label>
+                            </Statistic>
+
+                            <Statistic className='goalsStat2'>
+                                <Statistic.Value>
+                                    <Icon className='soccerIcon' name='soccer' />{player[index].statistics[0].goals.assists}
+                                </Statistic.Value>
+                                <Statistic.Label>Assists</Statistic.Label>
+                            </Statistic>
 
                         </Statistic.Group>
-                        </div>
+                    
+                        
                     </Segment>
-
                 </Grid.Column>
             </>
           )
