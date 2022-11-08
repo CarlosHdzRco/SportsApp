@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import { Grid } from 'semantic-ui-react'
 import {useDispatch, useSelector} from 'react-redux'
-import { addGoals } from '../actions/actions'
+import { addGoals, updateActiveItem, updateLeagueInfo, updateStandingsActiveItem } from '../actions/actions'
 import GoalsItem from './GoalsItem'
 import '../css/Statistics.css'
-import { updateLeagueInfo } from '../actions/actions'
 
 function Goals() {
 
@@ -18,6 +17,9 @@ function Goals() {
 
   //UseEffect Hook
   useEffect(() => {
+    dispatch(updateActiveItem('Stats'))
+    dispatch(updateStandingsActiveItem('Goals'))
+
 
     const apiCall = async() => {
       await fetch(`https://v3.football.api-sports.io/players/topscorers?league=${leagueId}&season=2022`, {
@@ -43,7 +45,10 @@ function Goals() {
         //dispatch league info into global leagueInfo state
         dispatch(addGoals(leagueId, data.response))
         setLoaded(true)
-      })
+        })
+
+        
+        
 
     }
     if(String(leagueId) !== String(stats.league)) {

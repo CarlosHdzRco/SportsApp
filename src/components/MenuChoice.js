@@ -49,11 +49,12 @@ function MenuChoice({children}) {
 
     const dispatch = useDispatch()
     const league = useSelector((state) => state.leagueId)
-    const [activeItem, setActiveItem] = useState('Standings')
+    const activeItem = useSelector((state) => state.activeItem)
+    // const [activeItem, setActiveItem] = useState('Standings')
 
     const handleItemClick = (e) => {
         // console.log(e.target.innerText)
-        setActiveItem(e.target.innerText)
+        // setActiveItem(e.target.innerText)
     }
 
     const changeLeague = (e) => {

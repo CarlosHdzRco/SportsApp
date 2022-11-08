@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import { updateLeagueInfo, addStandings, updateLeagueId } from '../actions/actions'
+import { updateLeagueInfo, addStandings, updateLeagueId, updateActiveItem } from '../actions/actions'
 import { Table, Loader} from 'semantic-ui-react'
 import TableHeader from './TableHeader'
 import StandingsItem from './StandingsItem'
@@ -17,6 +17,7 @@ function Standings() {
 
   useEffect(() => {
     console.log('standings use effect')
+    dispatch(updateActiveItem('Standings'))
 
     const apiCall = async() => {
       await fetch(`https://v3.football.api-sports.io/standings?league=${leagueId}&season=2022`, {

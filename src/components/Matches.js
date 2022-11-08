@@ -4,7 +4,7 @@ import { Grid, Image, Dimmer, Loader } from 'semantic-ui-react'
 import {useDispatch, useSelector} from 'react-redux'
 import { addMatches } from '../actions/actions'
 import MatchesItem from './MatchesItem'
-import { updateLeagueInfo } from '../actions/actions'
+import { updateLeagueInfo, updateActiveItem } from '../actions/actions'
 
 
 
@@ -18,6 +18,7 @@ function Matches() {
 
   //UseEffect Hook
   useEffect(() => {
+    dispatch(updateActiveItem('Matches'))
 
     const apiCall = async() => {
       await fetch(`https://v3.football.api-sports.io/fixtures?league=${leagueId}&season=2022&status=NS&timezone=America/Chicago&next=20`, {

@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { addAssists } from '../actions/actions'
 import AssistsItem from './AssistsItem'
 import '../css/Statistics.css'
-import { updateLeagueInfo } from '../actions/actions'
+import { updateLeagueInfo, updateActiveItem, updateStandingsActiveItem } from '../actions/actions'
 
 function Assists() {
 
@@ -18,6 +18,9 @@ function Assists() {
 
   //UseEffect Hook
   useEffect(() => {
+    dispatch(updateActiveItem('Stats'))
+    dispatch(updateStandingsActiveItem('Assists'))
+
 
     const apiCall = async() => {
       await fetch(`https://v3.football.api-sports.io/players/topassists?league=${leagueId}&season=2022`, {

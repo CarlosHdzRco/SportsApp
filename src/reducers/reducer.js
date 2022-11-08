@@ -6,9 +6,11 @@ export const reducer = (state, action) => {
             standings: {league: 0, standingsList: []},
             topGoals: {league: 0, playerList: []},
             topAssists: {league: 0, playerList: []},
+            standingsActiveItem: '',
             matches: {league: 0, matchesList: []},
             leagueInfo: {},
-            leagueId: '39'
+            leagueId: '39',
+            activeItem: ''
         }
     }
 
@@ -47,6 +49,17 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 matches: {league: action.id, matchesList: action.matchesList}
+            }
+        case 'UPDATE_ACTIVE_ITEM':
+            return {
+                ...state,
+                activeItem: action.activeItem
+            }
+        case 'UPDATE_STANDINGS_ACTIVE_ITEM':
+            console.log('active item standings: ', action.activeItem)
+            return {
+                ...state,
+                standingsActiveItem: action.activeItem
             }
 
         default:

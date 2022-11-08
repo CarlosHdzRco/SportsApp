@@ -44,3 +44,17 @@ export const updateLeagueInfo = (leagueInfo) => {
     }
 }
 
+export const updateActiveItem = (activeItem) => {
+    return {
+        type: 'UPDATE_ACTIVE_ITEM',
+        activeItem
+    }
+}
+
+export const updateStandingsActiveItem = (activeItem) => {
+    return {
+        type: 'UPDATE_STANDINGS_ACTIVE_ITEM',
+        activeItem
+    }
+}
+
