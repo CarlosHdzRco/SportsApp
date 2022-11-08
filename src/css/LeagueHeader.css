@@ -1,4 +1,7 @@
 .leagueHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
     width: 70%;
     margin-top: 0px;
     padding-top: 10px;
@@ -9,17 +12,24 @@
 
 .leagueInfo {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .leagueLogoText {
     display: flex;
-    align-items: center;
+    
 }
 
 .leagueInfoLogo {
     height: 60px;
     margin-right: 20px;
+}
+
+.leaguInfoText {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .leagueInfoFlag {
@@ -28,46 +38,64 @@
     height: 40px;
 }
 
+.ui.header.leagueInfoFlag {
+    margin: 0px;
+    padding-top: 10px;
+
+}
+
 @media screen and (min-width: 500px) and (max-width: 700px) {
     .leagueInfoLogo {
-        height: 30px;
+        height: 40px;
         margin-right: 20px;
     }
     
     .leagueInfoFlag {
         display: flex;
         align-self: center;
-        height: 20px;
+        height: 30px;
     }
     .leagueLogoText {
         display: flex;
+        /* align-items: center; */
+        /* font-size:smaller; */
+        /* background-color: yellow; */
+    }
+
+    .leaguInfoText {
+        display: flex;
         align-items: center;
-        font-size:smaller;
-        /* background-color: red; */
+        font-size: 1.7rem;
+        font-weight: 700;
     }
     
 }
 
 @media screen and (max-width: 500px) {
     .leagueInfoLogo {
-        height: 20px;
+        height: 35px;
         margin-right: 10px;
     }
     
     .leagueInfoFlag {
         display: flex;
         align-self: center;
-        height: 15px;
-        /* visibility: hidden; */
+        height: 27px;
+
     }
     .leagueLogoText {
         display: flex;
         align-items: center;
-        font-size:1rem;
         /* background-color: blue; */
     }
     .leagueHeaderContainer {
         width: 90%;
+    }
+    .leaguInfoText {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 700;
     }
     
 }
