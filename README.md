@@ -28,21 +28,21 @@
 
 ## Screenshots
 
-![Standings](./screenshots/Standings.png)
+![Standings](./src/screenshots/Standings.png)
 
-![Goals 1](./screenshots/Goals1.png)
+![Goals 1](./src/screenshots/Goals1.png)
 
-![Goals 2](./screenshots/Goals2.png)
+![Goals 2](./src/screenshots/Goals2.png)
 
-![Assists 1](./screenshots/Assists1.png)
+![Assists 1](./src/screenshots/Assists1.png)
 
-![Assists 2](./screenshots/Assists2.png)
+![Assists 2](./src/screenshots/Assists2.png)
 
-![Matches](./screenshots/Matches.png)
+![Matches](./src/screenshots/Matches.png)
 
-![Navbar Dropdown](./screenshots/NavbarDropdown.png)
+![Navbar Dropdown](./src/screenshots/NavbarDropdown.png)
 
-![Support Creator](./screenshots/SupportCreator.png)
+![Support Creator](./src/screenshots/SupportCreator.png)
 
 ## Developer Team
 
