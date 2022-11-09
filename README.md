@@ -1,7 +1,7 @@
 
 # Soccer Info
 
-[Soccer Info](https://main.d29w9w8trrzcml.amplifyapp.com/) is a platform where a user can choose one of the top league in Europe to check the standings, stats, and matches of various leagues around Europe. The site features info from leagues like The Premier League, La Liga, Bundesliga, Serie A, Ligue 1, and Eredivisie.
+[Soccer Info](https://main.d29w9w8trrzcml.amplifyapp.com/) is a platform where a user can choose one of the top league in Europe to check the standings, stats, and matches. The site features info from leagues like The Premier League, La Liga, Bundesliga, Serie A, Ligue 1, and Eredivisie.
 
 ## Tech Stack
 
