@@ -1,70 +1,54 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Soccer Info
 
-## Available Scripts
+[Soccer Info](https://main.d29w9w8trrzcml.amplifyapp.com/) is a platform where a user can choose one of the top league in Europe to check the standings, stats, and matches of various leagues around Europe. The site features info from leagues like The Premier League, La Liga, Bundesliga, Serie A, Ligue 1, and Eredivisie.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+**Front-End:** React, Redux, Javascript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Deployment:** AWS Amplify
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Design:** HTML, CSS, Semantic UI
 
-### `npm test`
+**APIs:** API-Football
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Other Incorporated Packages**: @paypal/react-paypal-js
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Header where a user can choose a league
+- Standings section which shows all the teams in the league ranked.
+- Standings shows team stats such as Games Played, Wins, Draws, Losses, Goals For, Goals Against, Goal Differential, Points and Form
+- Stats section shows top goal scorers and assists from each league
+- Matches section shows the leagues next 20 games.
+- Matches section has home and away team logos, also including time(central), date and stadium of the match
+- At the bottom there is a support the creator button that will open up a popup where a user can donate $2 through paypal
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+![Standings](./screenshots/Standings.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Goals 1](./screenshots/Goals1.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Goals 2](./screenshots/Goals2.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Assists 1](./screenshots/Assists1.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Assists 2](./screenshots/Assists2.png)
 
-## Learn More
+![Matches](./screenshots/Matches.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Navbar Dropdown](./screenshots/NavbarDropdown.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Support Creator](./screenshots/SupportCreator.png)
 
-### Code Splitting
+## Developer Team
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Carlos Hernandez](https://www.linkedin.com/in/carloshdzrco/)
 
-### Analyzing the Bundle Size
+## GitHub Repo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[Soccer Info repo](https://github.com/CarlosHdzRco/SportsApp)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
