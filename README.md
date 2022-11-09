@@ -44,7 +44,7 @@
 
 ![Support Creator](./src/screenshots/SupportCreator.png)
 
-## Developer Team
+## Developer
 
 - [Carlos Hernandez](https://www.linkedin.com/in/carloshdzrco/)
 
